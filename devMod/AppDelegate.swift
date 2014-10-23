@@ -11,17 +11,37 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    @IBOutlet weak var window: NSWindow!
-
+    @IBOutlet weak var appMenu: NSMenu!
+    var statusItem:NSStatusItem?
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+        
+        var interfaceValue:CFString = "AppleInterfaceStyle" as CFString
+        var property:CFPropertyList! = CFPreferencesCopyAppValue(interfaceValue, kCFPreferencesCurrentApplication)
+        
+        if property.isEqual("Light"){
+            println("Light")
+            CFPreferenceSer
+        }
+        else{
+            println("Dark")
+        }
+    
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
     }
 
+    override func awakeFromNib() {
+        var statusBar = NSStatusBar.systemStatusBar()
+        statusItem = statusBar.statusItemWithLength(-1)
+        statusItem!.menu = appMenu
+        statusItem?.title = "devMod"
+    }
 
+    @IBAction func activateDevMode(sender: AnyObject) {
+        
+        
+    }
 }
 
