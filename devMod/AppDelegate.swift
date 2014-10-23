@@ -17,16 +17,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         
         var interfaceValue:CFString = "AppleInterfaceStyle" as CFString
-        var property:CFPropertyList! = CFPreferencesCopyAppValue(interfaceValue, kCFPreferencesCurrentApplication)
+        var property:CFPropertyList? = CFPreferencesCopyValue(interfaceValue, kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost)
         
-        if property.isEqual("Light"){
-            println("Light")
-            CFPreferenceSer
+        println(property!)
+        
+        if let light: CFPropertyList = property{
+            if light as NSString == "Light"{
+                activateDarkInterface()
+            }
+            else{
+                activateLightInterface()
+            }
         }
         else{
-            println("Dark")
+            activateDarkInterface()
         }
-    
+        
+        var notificationName:CFString = "AppleInterfaceThemeChangedNotification" as CFString
+        var ok:Boolean = 0
+        CFNotificationCenterPostNotification(CFNotificationCenterGetDistributedCenter(), notificationName, nil, nil, ok)
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -42,6 +51,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func activateDevMode(sender: AnyObject) {
         
         
+    }
+    
+    func activateLightInterface(){
+        let interfaceValue:CFString = "AppleInterfaceStyle" as CFString
+        let mode:CFPropertyList! = "Light" as CFPropertyList
+        CFPreferencesSetValue(interfaceValue, mode, kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost)
+    }
+    
+    func activateDarkInterface(){
+        let interfaceValue:CFString = "AppleInterfaceStyle" as CFString
+        let mode:CFPropertyList! = "Dark" as CFPropertyList
+        CFPreferencesSetValue(interfaceValue, mode, kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost)
     }
 }
 
