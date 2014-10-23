@@ -15,27 +15,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var statusItem:NSStatusItem?
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        
-        var interfaceValue:CFString = "AppleInterfaceStyle" as CFString
-        var property:CFPropertyList? = CFPreferencesCopyValue(interfaceValue, kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost)
-        
-        println(property!)
-        
-        if let light: CFPropertyList = property{
-            if light as NSString == "Light"{
-                activateDarkInterface()
-            }
-            else{
-                activateLightInterface()
-            }
-        }
-        else{
-            activateDarkInterface()
-        }
-        
-        var notificationName:CFString = "AppleInterfaceThemeChangedNotification" as CFString
-        var ok:Boolean = 0
-        CFNotificationCenterPostNotification(CFNotificationCenterGetDistributedCenter(), notificationName, nil, nil, ok)
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -49,20 +28,41 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @IBAction func activateDevMode(sender: AnyObject) {
+        var interfaceValue:CFString = "AppleInterfaceStyle" as CFString
+        var property:CFPropertyList? = CFPreferencesCopyValue(interfaceValue, kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost)
         
+        if let light: CFPropertyList = property{
+            if light as NSString == "Light"{
+                activateDarkInterface()
+            }
+            else{
+                activateLightInterface()
+            }
+        }
+        else{
+            activateDarkInterface()
+        }
         
     }
     
     func activateLightInterface(){
+        println("Switch to light Theme")
         let interfaceValue:CFString = "AppleInterfaceStyle" as CFString
         let mode:CFPropertyList! = "Light" as CFPropertyList
         CFPreferencesSetValue(interfaceValue, mode, kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost)
+        var notificationName:CFString = "AppleInterfaceThemeChangedNotification" as CFString
+        var ok:Boolean = 0
+        CFNotificationCenterPostNotification(CFNotificationCenterGetDistributedCenter(), notificationName, nil, nil, ok)
     }
     
     func activateDarkInterface(){
+        println("Switch to dark Theme")
         let interfaceValue:CFString = "AppleInterfaceStyle" as CFString
         let mode:CFPropertyList! = "Dark" as CFPropertyList
         CFPreferencesSetValue(interfaceValue, mode, kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost)
+        var notificationName:CFString = "AppleInterfaceThemeChangedNotification" as CFString
+        var ok:Boolean = 0
+        CFNotificationCenterPostNotification(CFNotificationCenterGetDistributedCenter(), notificationName, nil, nil, ok)
     }
 }
 
