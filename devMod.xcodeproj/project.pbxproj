@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48992C0D19FA387000C0E88B /* DevModeInterfaceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 48992C0C19FA387000C0E88B /* DevModeInterfaceManager.m */; };
 		48C7CEE019F98EE8006B8EC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C7CEDF19F98EE8006B8EC0 /* AppDelegate.swift */; };
 		48C7CEE219F98EE8006B8EC0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48C7CEE119F98EE8006B8EC0 /* Images.xcassets */; };
 		48C7CEE519F98EE8006B8EC0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48C7CEE319F98EE8006B8EC0 /* MainMenu.xib */; };
@@ -24,6 +25,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		48992C0A19FA387000C0E88B /* devMod-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "devMod-Bridging-Header.h"; sourceTree = "<group>"; };
+		48992C0B19FA387000C0E88B /* DevModeInterfaceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevModeInterfaceManager.h; sourceTree = "<group>"; };
+		48992C0C19FA387000C0E88B /* DevModeInterfaceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevModeInterfaceManager.m; sourceTree = "<group>"; };
 		48C7CEDA19F98EE8006B8EC0 /* devMod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = devMod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C7CEDE19F98EE8006B8EC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48C7CEDF19F98EE8006B8EC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +81,9 @@
 				48C7CEE119F98EE8006B8EC0 /* Images.xcassets */,
 				48C7CEE319F98EE8006B8EC0 /* MainMenu.xib */,
 				48C7CEDD19F98EE8006B8EC0 /* Supporting Files */,
+				48992C0B19FA387000C0E88B /* DevModeInterfaceManager.h */,
+				48992C0C19FA387000C0E88B /* DevModeInterfaceManager.m */,
+				48992C0A19FA387000C0E88B /* devMod-Bridging-Header.h */,
 			);
 			path = devMod;
 			sourceTree = "<group>";
@@ -205,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48992C0D19FA387000C0E88B /* DevModeInterfaceManager.m in Sources */,
 				48C7CEE019F98EE8006B8EC0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,10 +328,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = devMod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "devMod/devMod-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -331,10 +342,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = devMod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "devMod/devMod-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -393,6 +406,7 @@
 				48C7CEF619F98EE8006B8EC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		48C7CEF719F98EE8006B8EC0 /* Build configuration list for PBXNativeTarget "devModTests" */ = {
 			isa = XCConfigurationList;
@@ -401,6 +415,7 @@
 				48C7CEF919F98EE8006B8EC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
