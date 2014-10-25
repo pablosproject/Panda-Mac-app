@@ -24,6 +24,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         //Tira su le date dai default di sistema
         darkTime =  NSUserDefaults.standardUserDefaults().valueForKey("DarkTime") as? NSDate
         lightTime =  NSUserDefaults.standardUserDefaults().valueForKey("LightTime") as? NSDate
+        
+        dateCheckTimer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "checkTime", userInfo: nil, repeats: true)
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -89,6 +91,33 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     @IBAction func preferencesPressed(sender: AnyObject) {
         preferenceWindow = NSPreferencePanelWindowController(windowNibName: "NSPreferencePanelWindowController")
         preferenceWindow!.showWindow(self)
+    }
+    
+    //MARK: - Check timer
+    func checkTime(){
+        let now = NSDate()
+        
+        if (darkTime != nil) && (hasEqualHourAndMinutes(darkTime!, date2: now)){
+            activateDarkInterface()
+        }
+        
+        if (lightTime != nil) && (hasEqualHourAndMinutes(lightTime!, date2: now)){
+            activateLightInterface()
+        }
+        
+    }
+    
+    func hasEqualHourAndMinutes(date1:NSDate, date2:NSDate) -> (Bool){
+        let calendar = NSCalendar.currentCalendar()
+        let flag = (NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitMinute)
+        
+        let components1 = calendar.components(flag, fromDate: date1)
+        let components2 = calendar.components(flag, fromDate: date2)
+        
+        let equalminutes = components1.minute == components2.minute
+        let equalHour = components1.hour == components2.hour
+        
+        return equalminutes && equalHour
     }
 }
 
