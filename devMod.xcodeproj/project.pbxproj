@@ -12,6 +12,9 @@
 		48C7CEE219F98EE8006B8EC0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48C7CEE119F98EE8006B8EC0 /* Images.xcassets */; };
 		48C7CEE519F98EE8006B8EC0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48C7CEE319F98EE8006B8EC0 /* MainMenu.xib */; };
 		48C7CEF119F98EE8006B8EC0 /* devModTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C7CEF019F98EE8006B8EC0 /* devModTests.swift */; };
+		48D0718519FBEDD6000ADE2F /* NSPreferencePanelWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0718319FBEDD6000ADE2F /* NSPreferencePanelWindowController.swift */; };
+		48D0718619FBEDD6000ADE2F /* NSPreferencePanelWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48D0718419FBEDD6000ADE2F /* NSPreferencePanelWindowController.xib */; };
+		48D0718919FBEFE4000ADE2F /* DevModeLoginItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D0718819FBEFE4000ADE2F /* DevModeLoginItemManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,10 @@
 		48C7CEEA19F98EE8006B8EC0 /* devModTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = devModTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C7CEEF19F98EE8006B8EC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48C7CEF019F98EE8006B8EC0 /* devModTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devModTests.swift; sourceTree = "<group>"; };
+		48D0718319FBEDD6000ADE2F /* NSPreferencePanelWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPreferencePanelWindowController.swift; sourceTree = "<group>"; };
+		48D0718419FBEDD6000ADE2F /* NSPreferencePanelWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSPreferencePanelWindowController.xib; sourceTree = "<group>"; };
+		48D0718719FBEFE4000ADE2F /* DevModeLoginItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevModeLoginItemManager.h; sourceTree = "<group>"; };
+		48D0718819FBEFE4000ADE2F /* DevModeLoginItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevModeLoginItemManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +91,10 @@
 				48992C0B19FA387000C0E88B /* DevModeInterfaceManager.h */,
 				48992C0C19FA387000C0E88B /* DevModeInterfaceManager.m */,
 				48992C0A19FA387000C0E88B /* devMod-Bridging-Header.h */,
+				48D0718319FBEDD6000ADE2F /* NSPreferencePanelWindowController.swift */,
+				48D0718419FBEDD6000ADE2F /* NSPreferencePanelWindowController.xib */,
+				48D0718719FBEFE4000ADE2F /* DevModeLoginItemManager.h */,
+				48D0718819FBEFE4000ADE2F /* DevModeLoginItemManager.m */,
 			);
 			path = devMod;
 			sourceTree = "<group>";
@@ -193,6 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48D0718619FBEDD6000ADE2F /* NSPreferencePanelWindowController.xib in Resources */,
 				48C7CEE219F98EE8006B8EC0 /* Images.xcassets in Resources */,
 				48C7CEE519F98EE8006B8EC0 /* MainMenu.xib in Resources */,
 			);
@@ -212,8 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48D0718519FBEDD6000ADE2F /* NSPreferencePanelWindowController.swift in Sources */,
 				48992C0D19FA387000C0E88B /* DevModeInterfaceManager.m in Sources */,
 				48C7CEE019F98EE8006B8EC0 /* AppDelegate.swift in Sources */,
+				48D0718919FBEFE4000ADE2F /* DevModeLoginItemManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

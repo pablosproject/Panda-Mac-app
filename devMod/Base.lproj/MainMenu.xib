@@ -15,6 +15,9 @@
             <items>
                 <menuItem title="Preferences" id="jRU-Ao-6Ff">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="preferencesPressed:" target="Voe-Tx-rLC" id="ONF-XD-mUl"/>
+                    </connections>
                 </menuItem>
                 <menuItem title="Quit" id="bOH-1S-Gqz">
                     <modifierMask key="keyEquivalentModifierMask"/>

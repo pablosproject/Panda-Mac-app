@@ -15,6 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     @IBOutlet weak var appMenu: NSMenu!
     var statusItem:NSStatusItem?
     var statusButton:NSStatusBarButton?
+    var preferenceWindow:NSPreferencePanelWindowController?
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
     }
@@ -76,6 +77,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
   //MARK: - NSMenuDelegate
     func menuDidClose(menu: NSMenu) {
         statusItem?.menu = nil
+    }
+    
+  //MARK: -Action management
+    @IBAction func preferencesPressed(sender: AnyObject) {
+        preferenceWindow = NSPreferencePanelWindowController(windowNibName: "NSPreferencePanelWindowController")
+        preferenceWindow!.showWindow(self)
     }
 }
 
