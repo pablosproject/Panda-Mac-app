@@ -7,12 +7,14 @@
 //
 
 import Cocoa
+import Appkit
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var appMenu: NSMenu!
     var statusItem:NSStatusItem?
+    var statusButton:NSStatusBarButton?
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
     }
@@ -23,11 +25,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     override func awakeFromNib() {
         var statusBar = NSStatusBar.systemStatusBar()
         statusItem = statusBar.statusItemWithLength(-1)
-        statusItem!.menu = appMenu
-        statusItem?.title = "devMod"
+        
+        statusButton = statusItem!.button!
+        statusButton?.title = "devMod"
+        statusButton?.target = self;
+        statusButton?.action = "barButtonMenuPressed:"
+        statusButton?.sendActionOn(Int((NSEventMask.LeftMouseDownMask | NSEventMask.RightMouseDownMask).rawValue))
     }
 
-    @IBAction func activateDevMode(sender: AnyObject) {
+    func activateDevMode(sender: AnyObject) {
         var interfaceValue:CFString = "AppleInterfaceStyle" as CFString
         var property:CFPropertyList? = CFPreferencesCopyValue(interfaceValue, kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost)
         
@@ -46,11 +52,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func activateLightInterface(){
+        println("Switch to Light")
         DevModeInterfaceManager.switchToLightMode()
     }
     
     func activateDarkInterface(){
+        println("Switch to Darks")
         DevModeInterfaceManager.switchToDarkMode()
+    }
+    
+    func barButtonMenuPressed(sender: NSStatusBarButton!){
+        var event:NSEvent! = NSApp.currentEvent!
+        if event.type == NSEventType.LeftMouseDown {
+            activateDevMode(sender)
+        }
+        else{
+            
+        }
     }
 }
 

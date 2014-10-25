@@ -13,14 +13,17 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <menu id="6nW-Zp-zqT">
             <items>
-                <menuItem title="Switch" id="zql-7H-vxf">
+                <menuItem title="Preferences" id="jRU-Ao-6Ff">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Quit" id="bOH-1S-Gqz">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="activateDevMode:" target="Voe-Tx-rLC" id="Xyi-Yd-kfy"/>
+                        <action selector="terminate:" target="-1" id="S5l-Wn-tky"/>
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="398" y="297.5"/>
+            <point key="canvasLocation" x="347.5" y="322.5"/>
         </menu>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="devMod" customModuleProvider="target">
             <connections>
