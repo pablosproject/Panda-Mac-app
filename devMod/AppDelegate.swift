@@ -10,7 +10,7 @@ import Cocoa
 import Appkit
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     @IBOutlet weak var appMenu: NSMenu!
     var statusItem:NSStatusItem?
@@ -31,6 +31,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusButton?.target = self;
         statusButton?.action = "barButtonMenuPressed:"
         statusButton?.sendActionOn(Int((NSEventMask.LeftMouseDownMask | NSEventMask.RightMouseDownMask).rawValue))
+        
+        appMenu.delegate = self
     }
 
     func activateDevMode(sender: AnyObject) {
@@ -67,8 +69,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             activateDevMode(sender)
         }
         else{
-            
+            statusItem?.menu = appMenu
         }
+    }
+    
+  //MARK: - NSMenuDelegate
+    func menuDidClose(menu: NSMenu) {
+        statusItem?.menu = nil
     }
 }
 
