@@ -28,4 +28,17 @@ class NSPreferencePanelWindowController: NSWindowController {
             DevModeLoginItemManager.removeCurrentApplicatonToLoginItems()
         }
     }
+    
+    @IBAction func darkTimeChange(sender: NSDatePicker) {
+        let appDelegate = NSApplication.sharedApplication().delegate as AppDelegate
+        appDelegate.darkTime = sender.dateValue
+        NSUserDefaults.standardUserDefaults().setValue(sender.dateValue, forKey: "DarkTime")
+    }
+    
+    @IBAction func lightTimeChange(sender: NSDatePicker) {
+        let appDelegate = NSApplication.sharedApplication().delegate as AppDelegate
+        appDelegate.lightTime = sender.dateValue
+        NSUserDefaults.standardUserDefaults().setValue(sender.dateValue, forKey: "LightTime")
+    }
+    
 }

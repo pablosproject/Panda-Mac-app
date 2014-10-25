@@ -45,6 +45,9 @@
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <datePickerElements key="datePickerElements" hour="YES" minute="YES"/>
                         </datePickerCell>
+                        <connections>
+                            <action selector="darkTimeChange:" target="-2" id="glV-Cp-ith"/>
+                        </connections>
                     </datePicker>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rz1-Ob-WEG">
                         <rect key="frame" x="20" y="198" width="120" height="17"/>
@@ -74,6 +77,9 @@
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <datePickerElements key="datePickerElements" hour="YES" minute="YES"/>
                         </datePickerCell>
+                        <connections>
+                            <action selector="lightTimeChange:" target="-2" id="jJb-iT-xeX"/>
+                        </connections>
                     </datePicker>
                 </subviews>
             </view>
