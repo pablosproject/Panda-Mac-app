@@ -18,6 +18,8 @@ class NSPreferencePanelWindowController: NSWindowController {
     override func windowDidLoad() {
         super.windowDidLoad()
         launchAtStartupButton.state = DevModeLoginItemManager.isCurrentApplicatonInLoginItems() ? NSOnState : NSOffState
+        darkModeDatePicker.dateValue = NSUserDefaults.standardUserDefaults().objectForKey("DarkTime") as NSDate
+        lightModeDatePicker.dateValue = NSUserDefaults.standardUserDefaults().objectForKey("LightTime") as NSDate
     }
     
     @IBAction func launchLoginPressed(sender: NSButton) {
@@ -32,13 +34,17 @@ class NSPreferencePanelWindowController: NSWindowController {
     @IBAction func darkTimeChange(sender: NSDatePicker) {
         let appDelegate = NSApplication.sharedApplication().delegate as AppDelegate
         appDelegate.darkTime = sender.dateValue
-        NSUserDefaults.standardUserDefaults().setValue(sender.dateValue, forKey: "DarkTime")
+        var userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setValue(sender.dateValue, forKey: "DarkTime")
+        userDefaults.synchronize()
     }
     
     @IBAction func lightTimeChange(sender: NSDatePicker) {
         let appDelegate = NSApplication.sharedApplication().delegate as AppDelegate
         appDelegate.lightTime = sender.dateValue
+        var userDefaults = NSUserDefaults.standardUserDefaults()
         NSUserDefaults.standardUserDefaults().setValue(sender.dateValue, forKey: "LightTime")
+        userDefaults.synchronize()
     }
     
 }
