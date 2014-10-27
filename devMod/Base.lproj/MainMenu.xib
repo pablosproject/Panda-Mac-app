@@ -26,7 +26,7 @@
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="347.5" y="322.5"/>
+            <point key="canvasLocation" x="347" y="322.5"/>
         </menu>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="devMod" customModuleProvider="target">
             <connections>
