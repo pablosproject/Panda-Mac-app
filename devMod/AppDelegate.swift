@@ -39,7 +39,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         statusButton?.title = "devMod"
         statusButton?.target = self;
         statusButton?.action = "barButtonMenuPressed:"
-        statusButton?.sendActionOn(Int((NSEventMask.LeftMouseDownMask | NSEventMask.RightMouseDownMask).rawValue))
+        statusButton?.sendActionOn(Int((NSEventMask.LeftMouseDownMask | NSEventMask.RightMouseDownMask | NSEventMask.RightMouseUpMask).rawValue))
         
         appMenu.delegate = self
     }
@@ -74,11 +74,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     
     func barButtonMenuPressed(sender: NSStatusBarButton!){
         var event:NSEvent! = NSApp.currentEvent!
-        if event.type == NSEventType.LeftMouseDown {
-            activateDevMode(sender)
+        if (event.type == NSEventType.RightMouseDown) || (event.type == NSEventType.RightMouseUp) {
+            statusItem?.menu = appMenu
         }
         else{
-            statusItem?.menu = appMenu
+            activateDevMode(sender)
         }
     }
     
