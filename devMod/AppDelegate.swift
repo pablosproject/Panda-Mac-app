@@ -25,7 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         darkTime =  NSUserDefaults.standardUserDefaults().valueForKey("DarkTime") as? NSDate
         lightTime =  NSUserDefaults.standardUserDefaults().valueForKey("LightTime") as? NSDate
         
-        dateCheckTimer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "checkTime", userInfo: nil, repeats: true)
+        dateCheckTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "checkTime", userInfo: nil, repeats: true)
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -39,7 +39,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         statusButton?.title = "devMod"
         statusButton?.target = self;
         statusButton?.action = "barButtonMenuPressed:"
-        statusButton?.sendActionOn(Int((NSEventMask.LeftMouseDownMask | NSEventMask.RightMouseDownMask | NSEventMask.RightMouseUpMask).rawValue))
+        statusButton?.sendActionOn(Int((NSEventMask.LeftMouseUpMask | NSEventMask.RightMouseUpMask).rawValue))
         
         appMenu.delegate = self
     }
@@ -74,8 +74,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     
     func barButtonMenuPressed(sender: NSStatusBarButton!){
         var event:NSEvent! = NSApp.currentEvent!
-        if (event.type == NSEventType.RightMouseDown) || (event.type == NSEventType.RightMouseUp) {
+        println (event.description)
+        if (event.type == NSEventType.RightMouseUp) {
             statusItem?.menu = appMenu
+            statusItem?.popUpStatusItemMenu(appMenu) //Force the menu to be shown, otherwise it'll not
         }
         else{
             activateDevMode(sender)
