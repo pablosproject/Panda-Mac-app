@@ -92,7 +92,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
   //MARK: -Action management
     @IBAction func preferencesPressed(sender: AnyObject) {
         preferenceWindow = NSPreferencePanelWindowController(windowNibName: "NSPreferencePanelWindowController")
-        preferenceWindow!.showWindow(self)
+        var window:NSWindow! = preferenceWindow?.window!
+        window.makeKeyAndOrderFront(self)
+        NSApp.activateIgnoringOtherApps(true)
     }
     
     //MARK: - Check timer
