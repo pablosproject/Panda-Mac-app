@@ -36,7 +36,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         statusItem = statusBar.statusItemWithLength(-1)
         
         statusButton = statusItem!.button!
-        statusButton?.title = "devMod"
+        statusButton?.image = NSImage(named: "panda")
         statusButton?.target = self;
         statusButton?.action = "barButtonMenuPressed:"
         statusButton?.sendActionOn(Int((NSEventMask.LeftMouseUpMask | NSEventMask.RightMouseUpMask).rawValue))
