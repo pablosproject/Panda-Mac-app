@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "48C7CED919F98EE8006B8EC0"
-               BuildableName = "devMod.app"
-               BlueprintName = "devMod"
-               ReferencedContainer = "container:devMod.xcodeproj">
+               BuildableName = "Panda.app"
+               BlueprintName = "Panda"
+               ReferencedContainer = "container:Panda.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "48C7CEE919F98EE8006B8EC0"
-               BuildableName = "devModTests.xctest"
-               BlueprintName = "devModTests"
-               ReferencedContainer = "container:devMod.xcodeproj">
+               BuildableName = "PandaTests.xctest"
+               BlueprintName = "PandaTests"
+               ReferencedContainer = "container:Panda.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "48C7CEE919F98EE8006B8EC0"
-               BuildableName = "devModTests.xctest"
-               BlueprintName = "devModTests"
-               ReferencedContainer = "container:devMod.xcodeproj">
+               BuildableName = "PandaTests.xctest"
+               BlueprintName = "PandaTests"
+               ReferencedContainer = "container:Panda.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "48C7CED919F98EE8006B8EC0"
-            BuildableName = "devMod.app"
-            BlueprintName = "devMod"
-            ReferencedContainer = "container:devMod.xcodeproj">
+            BuildableName = "Panda.app"
+            BlueprintName = "Panda"
+            ReferencedContainer = "container:Panda.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "48C7CED919F98EE8006B8EC0"
-            BuildableName = "devMod.app"
-            BlueprintName = "devMod"
-            ReferencedContainer = "container:devMod.xcodeproj">
+            BuildableName = "Panda.app"
+            BlueprintName = "Panda"
+            ReferencedContainer = "container:Panda.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "48C7CED919F98EE8006B8EC0"
-            BuildableName = "devMod.app"
-            BlueprintName = "devMod"
-            ReferencedContainer = "container:devMod.xcodeproj">
+            BuildableName = "Panda.app"
+            BlueprintName = "Panda"
+            ReferencedContainer = "container:Panda.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

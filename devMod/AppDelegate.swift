@@ -24,8 +24,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         //Tira su le date dai default di sistema
         darkTime =  NSUserDefaults.standardUserDefaults().valueForKey("DarkTime") as? NSDate
         lightTime =  NSUserDefaults.standardUserDefaults().valueForKey("LightTime") as? NSDate
-        
         dateCheckTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "checkTime", userInfo: nil, repeats: true)
+        updateIconForCurrentMode()
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -36,7 +36,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         statusItem = statusBar.statusItemWithLength(-1)
         
         statusButton = statusItem!.button!
-        statusButton?.image = NSImage(named: "panda")
         statusButton?.target = self;
         statusButton?.action = "barButtonMenuPressed:"
         statusButton?.sendActionOn(Int((NSEventMask.LeftMouseUpMask | NSEventMask.RightMouseUpMask).rawValue))
@@ -59,7 +58,20 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         else{
             activateDarkInterface()
         }
-        
+        updateIconForCurrentMode()
+    }
+    
+    func updateIconForCurrentMode() {
+        var interfaceValue:CFString = "AppleInterfaceStyle" as CFString
+        var property:CFPropertyList? = CFPreferencesCopyValue(interfaceValue, kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost)
+        if let light: CFPropertyList = property{
+            if light as NSString == "Light"{
+                statusButton?.image = NSImage(named: "panda_Light")
+            }
+            else{
+                statusButton?.image = NSImage(named: "panda_Dark")
+            }
+        }
     }
     
     func activateLightInterface(){

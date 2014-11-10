@@ -31,12 +31,12 @@
 		48992C0A19FA387000C0E88B /* devMod-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "devMod-Bridging-Header.h"; sourceTree = "<group>"; };
 		48992C0B19FA387000C0E88B /* DevModeInterfaceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevModeInterfaceManager.h; sourceTree = "<group>"; };
 		48992C0C19FA387000C0E88B /* DevModeInterfaceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevModeInterfaceManager.m; sourceTree = "<group>"; };
-		48C7CEDA19F98EE8006B8EC0 /* devMod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = devMod.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		48C7CEDA19F98EE8006B8EC0 /* Panda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Panda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C7CEDE19F98EE8006B8EC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48C7CEDF19F98EE8006B8EC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48C7CEE119F98EE8006B8EC0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		48C7CEE419F98EE8006B8EC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		48C7CEEA19F98EE8006B8EC0 /* devModTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = devModTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		48C7CEEA19F98EE8006B8EC0 /* PandaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PandaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C7CEEF19F98EE8006B8EC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48C7CEF019F98EE8006B8EC0 /* devModTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devModTests.swift; sourceTree = "<group>"; };
 		48D0718319FBEDD6000ADE2F /* NSPreferencePanelWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPreferencePanelWindowController.swift; sourceTree = "<group>"; };
@@ -75,8 +75,8 @@
 		48C7CEDB19F98EE8006B8EC0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				48C7CEDA19F98EE8006B8EC0 /* devMod.app */,
-				48C7CEEA19F98EE8006B8EC0 /* devModTests.xctest */,
+				48C7CEDA19F98EE8006B8EC0 /* Panda.app */,
+				48C7CEEA19F98EE8006B8EC0 /* PandaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,9 +127,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		48C7CED919F98EE8006B8EC0 /* devMod */ = {
+		48C7CED919F98EE8006B8EC0 /* Panda */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 48C7CEF419F98EE8006B8EC0 /* Build configuration list for PBXNativeTarget "devMod" */;
+			buildConfigurationList = 48C7CEF419F98EE8006B8EC0 /* Build configuration list for PBXNativeTarget "Panda" */;
 			buildPhases = (
 				48C7CED619F98EE8006B8EC0 /* Sources */,
 				48C7CED719F98EE8006B8EC0 /* Frameworks */,
@@ -139,14 +139,14 @@
 			);
 			dependencies = (
 			);
-			name = devMod;
+			name = Panda;
 			productName = devMod;
-			productReference = 48C7CEDA19F98EE8006B8EC0 /* devMod.app */;
+			productReference = 48C7CEDA19F98EE8006B8EC0 /* Panda.app */;
 			productType = "com.apple.product-type.application";
 		};
-		48C7CEE919F98EE8006B8EC0 /* devModTests */ = {
+		48C7CEE919F98EE8006B8EC0 /* PandaTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 48C7CEF719F98EE8006B8EC0 /* Build configuration list for PBXNativeTarget "devModTests" */;
+			buildConfigurationList = 48C7CEF719F98EE8006B8EC0 /* Build configuration list for PBXNativeTarget "PandaTests" */;
 			buildPhases = (
 				48C7CEE619F98EE8006B8EC0 /* Sources */,
 				48C7CEE719F98EE8006B8EC0 /* Frameworks */,
@@ -157,9 +157,9 @@
 			dependencies = (
 				48C7CEEC19F98EE8006B8EC0 /* PBXTargetDependency */,
 			);
-			name = devModTests;
+			name = PandaTests;
 			productName = devModTests;
-			productReference = 48C7CEEA19F98EE8006B8EC0 /* devModTests.xctest */;
+			productReference = 48C7CEEA19F98EE8006B8EC0 /* PandaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -180,7 +180,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 48C7CED519F98EE8006B8EC0 /* Build configuration list for PBXProject "devMod" */;
+			buildConfigurationList = 48C7CED519F98EE8006B8EC0 /* Build configuration list for PBXProject "Panda" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -193,8 +193,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				48C7CED919F98EE8006B8EC0 /* devMod */,
-				48C7CEE919F98EE8006B8EC0 /* devModTests */,
+				48C7CED919F98EE8006B8EC0 /* Panda */,
+				48C7CEE919F98EE8006B8EC0 /* PandaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -244,7 +244,7 @@
 /* Begin PBXTargetDependency section */
 		48C7CEEC19F98EE8006B8EC0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 48C7CED919F98EE8006B8EC0 /* devMod */;
+			target = 48C7CED919F98EE8006B8EC0 /* Panda */;
 			targetProxy = 48C7CEEB19F98EE8006B8EC0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -347,7 +347,7 @@
 				INFOPLIST_FILE = devMod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Panda;
 				SWIFT_OBJC_BRIDGING_HEADER = "devMod/devMod-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -362,7 +362,7 @@
 				INFOPLIST_FILE = devMod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Panda;
 				SWIFT_OBJC_BRIDGING_HEADER = "devMod/devMod-Bridging-Header.h";
 			};
 			name = Release;
@@ -382,7 +382,7 @@
 				);
 				INFOPLIST_FILE = devModTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PandaTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/devMod.app/Contents/MacOS/devMod";
 			};
 			name = Debug;
@@ -398,7 +398,7 @@
 				);
 				INFOPLIST_FILE = devModTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PandaTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/devMod.app/Contents/MacOS/devMod";
 			};
 			name = Release;
@@ -406,7 +406,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		48C7CED519F98EE8006B8EC0 /* Build configuration list for PBXProject "devMod" */ = {
+		48C7CED519F98EE8006B8EC0 /* Build configuration list for PBXProject "Panda" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				48C7CEF219F98EE8006B8EC0 /* Debug */,
@@ -415,7 +415,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		48C7CEF419F98EE8006B8EC0 /* Build configuration list for PBXNativeTarget "devMod" */ = {
+		48C7CEF419F98EE8006B8EC0 /* Build configuration list for PBXNativeTarget "Panda" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				48C7CEF519F98EE8006B8EC0 /* Debug */,
@@ -424,7 +424,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		48C7CEF719F98EE8006B8EC0 /* Build configuration list for PBXNativeTarget "devModTests" */ = {
+		48C7CEF719F98EE8006B8EC0 /* Build configuration list for PBXNativeTarget "PandaTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				48C7CEF819F98EE8006B8EC0 /* Debug */,
