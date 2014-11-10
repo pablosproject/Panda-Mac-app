@@ -18,8 +18,14 @@ class NSPreferencePanelWindowController: NSWindowController {
     override func windowDidLoad() {
         super.windowDidLoad()
         launchAtStartupButton.state = DevModeLoginItemManager.isCurrentApplicatonInLoginItems() ? NSOnState : NSOffState
-        darkModeDatePicker.dateValue = NSUserDefaults.standardUserDefaults().objectForKey("DarkTime") as NSDate
-        lightModeDatePicker.dateValue = NSUserDefaults.standardUserDefaults().objectForKey("LightTime") as NSDate
+        
+        if let darkDate = NSUserDefaults.standardUserDefaults().objectForKey("DarkTime") as? NSDate {
+            darkModeDatePicker.dateValue = darkDate
+        }
+        
+        if let lightDate = NSUserDefaults.standardUserDefaults().objectForKey("LightTime") as? NSDate{
+            lightModeDatePicker.dateValue = lightDate
+        }
     }
     
     @IBAction func launchLoginPressed(sender: NSButton) {
