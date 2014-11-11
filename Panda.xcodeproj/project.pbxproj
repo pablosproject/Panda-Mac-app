@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		484C3C6C1A117023002F09F8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48C7CEE319F98EE8006B8EC0 /* MainMenu.xib */; };
 		48992C0D19FA387000C0E88B /* DevModeInterfaceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 48992C0C19FA387000C0E88B /* DevModeInterfaceManager.m */; };
 		48C7CEE019F98EE8006B8EC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C7CEDF19F98EE8006B8EC0 /* AppDelegate.swift */; };
 		48C7CEE219F98EE8006B8EC0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48C7CEE119F98EE8006B8EC0 /* Images.xcassets */; };
-		48C7CEE519F98EE8006B8EC0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48C7CEE319F98EE8006B8EC0 /* MainMenu.xib */; };
 		48C7CEF119F98EE8006B8EC0 /* devModTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C7CEF019F98EE8006B8EC0 /* devModTests.swift */; };
 		48D0718519FBEDD6000ADE2F /* NSPreferencePanelWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0718319FBEDD6000ADE2F /* NSPreferencePanelWindowController.swift */; };
 		48D0718619FBEDD6000ADE2F /* NSPreferencePanelWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48D0718419FBEDD6000ADE2F /* NSPreferencePanelWindowController.xib */; };
 		48D0718919FBEFE4000ADE2F /* DevModeLoginItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D0718819FBEFE4000ADE2F /* DevModeLoginItemManager.m */; };
+		48DC12ED1A122FD30095E932 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48DC12EC1A122FD30095E932 /* Sparkle.framework */; };
+		48DC12EF1A1230030095E932 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 48DC12EC1A122FD30095E932 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		48DC12F11A12318A0095E932 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 48DC12F01A12318A0095E932 /* dsa_pub.pem */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +29,19 @@
 			remoteInfo = devMod;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		48DC12EE1A122FEE0095E932 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				48DC12EF1A1230030095E932 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		48992C0A19FA387000C0E88B /* devMod-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "devMod-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -43,6 +59,8 @@
 		48D0718419FBEDD6000ADE2F /* NSPreferencePanelWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSPreferencePanelWindowController.xib; sourceTree = "<group>"; };
 		48D0718719FBEFE4000ADE2F /* DevModeLoginItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevModeLoginItemManager.h; sourceTree = "<group>"; };
 		48D0718819FBEFE4000ADE2F /* DevModeLoginItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevModeLoginItemManager.m; sourceTree = "<group>"; };
+		48DC12EC1A122FD30095E932 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		48DC12F01A12318A0095E932 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48DC12ED1A122FD30095E932 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +103,7 @@
 		48C7CEDC19F98EE8006B8EC0 /* devMod */ = {
 			isa = PBXGroup;
 			children = (
+				48DC12EB1A122FAC0095E932 /* Sparkle */,
 				48C7CEDF19F98EE8006B8EC0 /* AppDelegate.swift */,
 				48C7CEE119F98EE8006B8EC0 /* Images.xcassets */,
 				48C7CEE319F98EE8006B8EC0 /* MainMenu.xib */,
@@ -124,6 +144,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		48DC12EB1A122FAC0095E932 /* Sparkle */ = {
+			isa = PBXGroup;
+			children = (
+				48DC12F01A12318A0095E932 /* dsa_pub.pem */,
+				48DC12EC1A122FD30095E932 /* Sparkle.framework */,
+			);
+			name = Sparkle;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,6 +163,7 @@
 				48C7CED619F98EE8006B8EC0 /* Sources */,
 				48C7CED719F98EE8006B8EC0 /* Frameworks */,
 				48C7CED819F98EE8006B8EC0 /* Resources */,
+				48DC12EE1A122FEE0095E932 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -204,9 +234,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				484C3C6C1A117023002F09F8 /* MainMenu.xib in Resources */,
+				48DC12F11A12318A0095E932 /* dsa_pub.pem in Resources */,
 				48D0718619FBEDD6000ADE2F /* NSPreferencePanelWindowController.xib in Resources */,
 				48C7CEE219F98EE8006B8EC0 /* Images.xcassets in Resources */,
-				48C7CEE519F98EE8006B8EC0 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,9 +375,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/paolotagliani/.Trash,
+					"$(PROJECT_DIR)/devMod",
+				);
 				INFOPLIST_FILE = devMod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
 				PRODUCT_NAME = Panda;
 				SWIFT_OBJC_BRIDGING_HEADER = "devMod/devMod-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -359,9 +399,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/paolotagliani/.Trash,
+					"$(PROJECT_DIR)/devMod",
+				);
 				INFOPLIST_FILE = devMod/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
 				PRODUCT_NAME = Panda;
 				SWIFT_OBJC_BRIDGING_HEADER = "devMod/devMod-Bridging-Header.h";
 			};
@@ -383,7 +431,7 @@
 				INFOPLIST_FILE = devModTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = PandaTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/devMod.app/Contents/MacOS/devMod";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Panda.app/Contents/MacOS/Panda";
 			};
 			name = Debug;
 		};
@@ -399,7 +447,7 @@
 				INFOPLIST_FILE = devModTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = PandaTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/devMod.app/Contents/MacOS/devMod";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Panda.app/Contents/MacOS/Panda";
 			};
 			name = Release;
 		};

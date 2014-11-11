@@ -21,6 +21,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     var dateCheckTimer:NSTimer?
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+
         //Tira su le date dai default di sistema
         darkTime =  NSUserDefaults.standardUserDefaults().valueForKey("DarkTime") as? NSDate
         lightTime =  NSUserDefaults.standardUserDefaults().valueForKey("LightTime") as? NSDate

@@ -19,6 +19,12 @@
                         <action selector="preferencesPressed:" target="Voe-Tx-rLC" id="ONF-XD-mUl"/>
                     </connections>
                 </menuItem>
+                <menuItem title="Check for updates" id="FOH-Dk-llX">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="checkForUpdates:" target="9OZ-Dw-P5Q" id="ExR-8s-Fwc"/>
+                    </connections>
+                </menuItem>
                 <menuItem title="Quit" id="bOH-1S-Gqz">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -28,11 +34,12 @@
             </items>
             <point key="canvasLocation" x="347" y="322.5"/>
         </menu>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="devMod" customModuleProvider="target">
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Panda" customModuleProvider="target">
             <connections>
                 <outlet property="appMenu" destination="6nW-Zp-zqT" id="9Br-QM-Zoa"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <customObject id="9OZ-Dw-P5Q" customClass="SUUpdater"/>
     </objects>
 </document>

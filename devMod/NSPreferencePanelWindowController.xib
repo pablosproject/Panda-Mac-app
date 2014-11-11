@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="NSPreferencePanelWindowController" customModule="devMod" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="NSPreferencePanelWindowController" customModule="Panda" customModuleProvider="target">
             <connections>
                 <outlet property="darkModeDatePicker" destination="bge-OQ-uoT" id="tkF-NC-hLP"/>
                 <outlet property="launchAtStartupButton" destination="vQV-h0-gbN" id="x1Z-y3-7KB"/>
