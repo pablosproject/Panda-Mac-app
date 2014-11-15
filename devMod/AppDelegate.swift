@@ -9,6 +9,11 @@
 import Cocoa
 import Appkit
 
+enum currentInterface{
+    case light
+    case dark
+}
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
@@ -25,13 +30,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         //Tira su le date dai default di sistema
         darkTime =  NSUserDefaults.standardUserDefaults().valueForKey("DarkTime") as? NSDate
         lightTime =  NSUserDefaults.standardUserDefaults().valueForKey("LightTime") as? NSDate
-        dateCheckTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "checkTime", userInfo: nil, repeats: true)
+        dateCheckTimer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "checkTime", userInfo: nil, repeats: true)
+        
+        //Update icon with current interface state
         updateIconForCurrentMode()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"updateIconForCurrentMode", name: "AppleInterfaceThemeChangedNotification", object: nil)
     }
-
-    func applicationWillTerminate(aNotification: NSNotification) {
-    }
-
     override func awakeFromNib() {
         var statusBar = NSStatusBar.systemStatusBar()
         statusItem = statusBar.statusItemWithLength(-1)
@@ -44,37 +49,46 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         appMenu.delegate = self
     }
 
-    func activateDevMode(sender: AnyObject) {
-        var interfaceValue:CFString = "AppleInterfaceStyle" as CFString
-        var property:CFPropertyList? = CFPreferencesCopyValue(interfaceValue, kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost)
+    func currentInterfaceState () -> currentInterface{
+        let interfaceValue:CFString = "AppleInterfaceStyle" as CFString
+        let property:CFPropertyList? = CFPreferencesCopyValue(interfaceValue, kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost)
         
-        if let light: CFPropertyList = property{
+        if let light:CFPropertyList = property{
             if light as NSString == "Light"{
-                activateDarkInterface()
+                return currentInterface.light
             }
             else{
-                activateLightInterface()
+                return currentInterface.dark
             }
         }
         else{
-            activateDarkInterface()
+            return currentInterface.light
         }
-        updateIconForCurrentMode()
+    }
+    
+    func activateDevMode(sender: AnyObject) {
+        let currentInterfaceLight:currentInterface = currentInterfaceState()
+        
+        switch currentInterfaceLight{
+        case .light:
+            activateDarkInterface()
+        case .dark:
+            activateLightInterface()
+        }
     }
     
     func updateIconForCurrentMode() {
-        var interfaceValue:CFString = "AppleInterfaceStyle" as CFString
-        var property:CFPropertyList? = CFPreferencesCopyValue(interfaceValue, kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost)
-        if let light: CFPropertyList = property{
-            if light as NSString == "Light"{
-                statusButton?.image = NSImage(named: "panda_Light")
-            }
-            else{
-                statusButton?.image = NSImage(named: "panda_Dark")
-            }
+        let currentInterfaceLight:currentInterface = currentInterfaceState()
+        
+        switch currentInterfaceLight{
+        case .light:
+            statusButton?.image = NSImage(named: "panda-white")
+        case .dark:
+            statusButton?.image = NSImage(named: "panda-dark")
         }
     }
     
+
     func activateLightInterface(){
         println("Switch to Light")
         DevModeInterfaceManager.switchToLightMode()
