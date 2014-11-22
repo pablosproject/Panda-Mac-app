@@ -17,12 +17,19 @@ class NSPreferencePanelWindowController: NSWindowController {
     
     override func windowDidLoad() {
         super.windowDidLoad()
+        
+        self.window?.appearance = NSAppearance(named: NSAppearanceNameVibrantDark)
+        self.window?.titleVisibility = NSWindowTitleVisibility.Hidden;
+
+        //Set login item state
         launchAtStartupButton.state = DevModeLoginItemManager.isCurrentApplicatonInLoginItems() ? NSOnState : NSOffState
         
+        //Set darkDate
         if let darkDate = NSUserDefaults.standardUserDefaults().objectForKey("DarkTime") as? NSDate {
             darkModeDatePicker.dateValue = darkDate
         }
         
+        //Set light date
         if let lightDate = NSUserDefaults.standardUserDefaults().objectForKey("LightTime") as? NSDate{
             lightModeDatePicker.dateValue = lightDate
         }

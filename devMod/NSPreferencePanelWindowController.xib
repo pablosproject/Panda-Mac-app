@@ -6,88 +6,145 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSPreferencePanelWindowController" customModule="Panda" customModuleProvider="target">
             <connections>
-                <outlet property="darkModeDatePicker" destination="bge-OQ-uoT" id="tkF-NC-hLP"/>
+                <outlet property="darkModeDatePicker" destination="Ea7-V5-gyc" id="Oa4-LZ-rJv"/>
                 <outlet property="launchAtStartupButton" destination="vQV-h0-gbN" id="x1Z-y3-7KB"/>
-                <outlet property="lightModeDatePicker" destination="Ea7-V5-gyc" id="pYf-FM-HbH"/>
+                <outlet property="lightModeDatePicker" destination="v39-ug-iZa" id="Nr3-6P-t1y"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" unifiedTitleAndToolbar="YES"/>
             <windowCollectionBehavior key="collectionBehavior" stationary="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="480" height="270"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <rect key="contentRect" x="196" y="240" width="757" height="402"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
+            <value key="minSize" type="size" width="480" height="270"/>
+            <value key="maxSize" type="size" width="480" height="270"/>
             <view key="contentView" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <rect key="frame" x="0.0" y="0.0" width="757" height="402"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vQV-h0-gbN">
-                        <rect key="frame" x="18" y="18" width="204" height="18"/>
-                        <buttonCell key="cell" type="check" title="Launch Application at startup" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="RWp-kN-rjd">
-                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="launchLoginPressed:" target="-2" id="nUf-uH-ahQ"/>
-                        </connections>
-                    </button>
-                    <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bge-OQ-uoT">
-                        <rect key="frame" x="181" y="195" width="122" height="27"/>
-                        <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="Jjt-2v-v7V">
-                            <font key="font" metaFont="system"/>
-                            <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
-                                <!--1982-02-12 16:00:00 +0000-->
-                                <timeZone key="timeZone" name="US/Pacific"/>
-                            </calendarDate>
-                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <datePickerElements key="datePickerElements" hour="YES" minute="YES"/>
-                        </datePickerCell>
-                        <connections>
-                            <action selector="darkTimeChange:" target="-2" id="glV-Cp-ith"/>
-                        </connections>
-                    </datePicker>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rz1-Ob-WEG">
-                        <rect key="frame" x="20" y="198" width="120" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Start dark mode at" id="mmx-wG-pqb">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="411-9f-b23">
-                        <rect key="frame" x="20" y="145" width="119" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Start light mode at" id="ABi-hA-tZk">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ea7-V5-gyc">
-                        <rect key="frame" x="181" y="142" width="122" height="27"/>
-                        <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="tia-x0-wTH">
-                            <font key="font" metaFont="system"/>
-                            <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
-                                <!--1982-02-12 16:00:00 +0000-->
-                                <timeZone key="timeZone" name="US/Pacific"/>
-                            </calendarDate>
-                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <datePickerElements key="datePickerElements" hour="YES" minute="YES"/>
-                        </datePickerCell>
-                        <connections>
-                            <action selector="lightTimeChange:" target="-2" id="jJb-iT-xeX"/>
-                        </connections>
-                    </datePicker>
+                    <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="g0u-XE-tir">
+                        <rect key="frame" x="0.0" y="0.0" width="757" height="402"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rz1-Ob-WEG">
+                                <rect key="frame" x="83" y="249" width="142" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="138" id="NHv-Dw-quj"/>
+                                    <constraint firstAttribute="height" constant="25" id="cPD-TH-6bJ"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Start dark mode at" id="mmx-wG-pqb">
+                                    <font key="font" size="17" name="HelveticaNeue-Thin"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="411-9f-b23">
+                                <rect key="frame" x="533" y="249" width="140" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="F1F-AJ-sDr"/>
+                                    <constraint firstAttribute="width" constant="136" id="ZnI-IH-KEY"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Start light mode at" id="ABi-hA-tZk">
+                                    <font key="font" size="17" name="HelveticaNeue-Thin"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ea7-V5-gyc">
+                                <rect key="frame" x="60" y="174" width="189" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="189" id="Nhf-nh-jYH"/>
+                                    <constraint firstAttribute="height" constant="55" id="UvW-YP-nfx"/>
+                                </constraints>
+                                <datePickerCell key="cell" borderStyle="bezel" alignment="left" drawsBackground="NO" datePickerStyle="textField" id="tia-x0-wTH">
+                                    <font key="font" size="41" name="HelveticaNeue-Thin"/>
+                                    <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
+                                        <!--1982-02-12 16:00:00 +0000-->
+                                        <timeZone key="timeZone" name="US/Pacific"/>
+                                    </calendarDate>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <datePickerElements key="datePickerElements" hour="YES" minute="YES"/>
+                                </datePickerCell>
+                                <connections>
+                                    <action selector="darkTimeChange:" target="-2" id="kil-Db-c3M"/>
+                                </connections>
+                            </datePicker>
+                            <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="v39-ug-iZa">
+                                <rect key="frame" x="508" y="174" width="189" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="189" id="T0C-ST-mbB"/>
+                                    <constraint firstAttribute="height" constant="55" id="ah3-YF-mHb"/>
+                                </constraints>
+                                <datePickerCell key="cell" borderStyle="bezel" alignment="left" drawsBackground="NO" datePickerStyle="textField" id="gKf-jx-HoM">
+                                    <font key="font" size="41" name="HelveticaNeue-Thin"/>
+                                    <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
+                                        <!--1982-02-12 16:00:00 +0000-->
+                                        <timeZone key="timeZone" name="US/Pacific"/>
+                                    </calendarDate>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <datePickerElements key="datePickerElements" hour="YES" minute="YES"/>
+                                </datePickerCell>
+                                <connections>
+                                    <action selector="lightTimeChange:" target="-2" id="MSi-iW-dD4"/>
+                                </connections>
+                            </datePicker>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JeV-gA-sY6">
+                                <rect key="frame" x="322" y="290" width="112" height="112"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="112" id="Itm-tb-ijE"/>
+                                    <constraint firstAttribute="width" constant="112" id="Wkx-9N-c1O"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="pandaLogo" id="vPg-2d-krd"/>
+                            </imageView>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="vQV-h0-gbN">
+                                <rect key="frame" x="217" y="18" width="322" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="318" id="Lb6-VC-ct5"/>
+                                    <constraint firstAttribute="height" constant="34" id="x9b-qL-9jl"/>
+                                </constraints>
+                                <buttonCell key="cell" type="check" title="Automatically start Panda at login" bezelStyle="regularSquare" imagePosition="left" alignment="center" state="on" inset="2" id="RWp-kN-rjd">
+                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                    <font key="font" size="20" name="HelveticaNeue-Thin"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="launchLoginPressed:" target="-2" id="X1h-JR-edt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="JeV-gA-sY6" secondAttribute="centerX" id="2r1-aa-tS2"/>
+                            <constraint firstItem="rz1-Ob-WEG" firstAttribute="centerX" secondItem="Ea7-V5-gyc" secondAttribute="centerX" id="7IN-Aw-eOT"/>
+                            <constraint firstAttribute="centerX" secondItem="vQV-h0-gbN" secondAttribute="centerX" id="82g-31-aeW"/>
+                            <constraint firstItem="JeV-gA-sY6" firstAttribute="top" secondItem="g0u-XE-tir" secondAttribute="top" id="AYa-vg-x3H"/>
+                            <constraint firstItem="Ea7-V5-gyc" firstAttribute="top" secondItem="rz1-Ob-WEG" secondAttribute="bottom" constant="20" id="CJv-Qr-SqJ"/>
+                            <constraint firstAttribute="centerY" secondItem="v39-ug-iZa" secondAttribute="centerY" id="EjV-LO-x1o"/>
+                            <constraint firstItem="Ea7-V5-gyc" firstAttribute="leading" secondItem="g0u-XE-tir" secondAttribute="leading" constant="60" id="OIu-ya-TQi"/>
+                            <constraint firstItem="411-9f-b23" firstAttribute="centerY" secondItem="rz1-Ob-WEG" secondAttribute="centerY" id="WjA-NA-jyD"/>
+                            <constraint firstAttribute="centerY" secondItem="Ea7-V5-gyc" secondAttribute="centerY" id="c9U-29-3TB"/>
+                            <constraint firstAttribute="bottom" secondItem="vQV-h0-gbN" secondAttribute="bottom" constant="20" id="euu-GY-8uO"/>
+                            <constraint firstAttribute="trailing" secondItem="v39-ug-iZa" secondAttribute="trailing" constant="60" id="gkN-qt-GEd"/>
+                            <constraint firstItem="411-9f-b23" firstAttribute="centerX" secondItem="v39-ug-iZa" secondAttribute="centerX" id="iBU-Gm-koM"/>
+                        </constraints>
+                    </visualEffectView>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="g0u-XE-tir" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="fvC-eB-2eV"/>
+                    <constraint firstAttribute="trailing" secondItem="g0u-XE-tir" secondAttribute="trailing" id="mk5-SU-6US"/>
+                    <constraint firstAttribute="bottom" secondItem="g0u-XE-tir" secondAttribute="bottom" id="uCN-I5-OPF"/>
+                    <constraint firstItem="g0u-XE-tir" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="z3s-xQ-Abs"/>
+                </constraints>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
-            <point key="canvasLocation" x="288" y="344"/>
+            <point key="canvasLocation" x="147.5" y="274"/>
         </window>
     </objects>
+    <resources>
+        <image name="pandaLogo" width="341" height="341"/>
+    </resources>
 </document>
