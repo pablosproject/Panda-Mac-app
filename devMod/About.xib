@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="About" customModule="Panda" customModuleProvider="target">
+            <connections>
+                <outlet property="versionLabel" destination="5Oj-ZF-81G" id="Q0V-bB-P3n"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <rect key="contentRect" x="196" y="240" width="757" height="402"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
+            <value key="minSize" type="size" width="757" height="402"/>
+            <value key="maxSize" type="size" width="757" height="402"/>
+            <view key="contentView" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="757" height="402"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="9i5-eT-LDr">
+                        <rect key="frame" x="0.0" y="0.0" width="757" height="402"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ldr-9w-RzE">
+                                <rect key="frame" x="316" y="278" width="124" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="9TW-gS-STC"/>
+                                    <constraint firstAttribute="height" constant="124" id="YVe-48-82F"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="pandaLogo" id="gV1-HO-zce"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5Oj-ZF-81G">
+                                <rect key="frame" x="56" y="238" width="646" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="4oV-ek-MDY"/>
+                                    <constraint firstAttribute="width" constant="642" id="XBe-5q-4HZ"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="N5r-bd-7S6">
+                                    <font key="font" size="20" name="HelveticaNeue-Thin"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="5Oj-ZF-81G" firstAttribute="top" secondItem="Ldr-9w-RzE" secondAttribute="bottom" constant="8" id="MbZ-ZH-7xh"/>
+                            <constraint firstAttribute="centerX" secondItem="5Oj-ZF-81G" secondAttribute="centerX" id="Rm8-cl-QJF"/>
+                            <constraint firstItem="Ldr-9w-RzE" firstAttribute="top" secondItem="9i5-eT-LDr" secondAttribute="top" id="Tz7-oH-Jvu"/>
+                            <constraint firstAttribute="centerX" secondItem="Ldr-9w-RzE" secondAttribute="centerX" id="VCz-SD-sWo"/>
+                        </constraints>
+                    </visualEffectView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9i5-eT-LDr" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="60r-AJ-V1l"/>
+                    <constraint firstItem="9i5-eT-LDr" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="SXp-m7-PfX"/>
+                    <constraint firstAttribute="trailing" secondItem="9i5-eT-LDr" secondAttribute="trailing" id="aEO-hj-PiL"/>
+                    <constraint firstAttribute="bottom" secondItem="9i5-eT-LDr" secondAttribute="bottom" id="xuo-YM-4Lq"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="459.5" y="486"/>
+        </window>
+    </objects>
+    <resources>
+        <image name="pandaLogo" width="322" height="322"/>
+    </resources>
+</document>

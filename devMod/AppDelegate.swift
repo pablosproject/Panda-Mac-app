@@ -21,6 +21,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     var statusItem:NSStatusItem?
     var statusButton:NSStatusBarButton?
     var preferenceWindow:NSPreferencePanelWindowController?
+    var aboutWindow:About?
     var darkTime:NSDate?
     var lightTime:NSDate?
     var dateCheckTimer:NSTimer?
@@ -120,6 +121,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         NSApp.activateIgnoringOtherApps(true)
     }
     
+    @IBAction func aboutPressed(sender: AnyObject) {
+        aboutWindow = About(windowNibName: "About")
+        var window:NSWindow! = aboutWindow?.window!
+        window.makeKeyAndOrderFront(self)
+        NSApp.activateIgnoringOtherApps(true)
+    }
     //MARK: - Check timer
     func checkTime(){
         let now = NSDate()

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		481AB65B1A20EC8700CC2CDA /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481AB6591A20EC8700CC2CDA /* About.swift */; };
+		481AB65C1A20EC8700CC2CDA /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 481AB65A1A20EC8700CC2CDA /* About.xib */; };
 		484C3C6C1A117023002F09F8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48C7CEE319F98EE8006B8EC0 /* MainMenu.xib */; };
 		48992C0D19FA387000C0E88B /* DevModeInterfaceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 48992C0C19FA387000C0E88B /* DevModeInterfaceManager.m */; };
 		48C7CEE019F98EE8006B8EC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C7CEDF19F98EE8006B8EC0 /* AppDelegate.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		481AB6591A20EC8700CC2CDA /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		481AB65A1A20EC8700CC2CDA /* About.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = About.xib; sourceTree = "<group>"; };
 		48992C0A19FA387000C0E88B /* devMod-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "devMod-Bridging-Header.h"; sourceTree = "<group>"; };
 		48992C0B19FA387000C0E88B /* DevModeInterfaceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevModeInterfaceManager.h; sourceTree = "<group>"; };
 		48992C0C19FA387000C0E88B /* DevModeInterfaceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevModeInterfaceManager.m; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 				48C7CEE319F98EE8006B8EC0 /* MainMenu.xib */,
 				48DC12EB1A122FAC0095E932 /* Sparkle */,
 				48C7CEDD19F98EE8006B8EC0 /* Supporting Files */,
+				481AB6591A20EC8700CC2CDA /* About.swift */,
+				481AB65A1A20EC8700CC2CDA /* About.xib */,
 			);
 			path = devMod;
 			sourceTree = "<group>";
@@ -237,6 +243,7 @@
 				484C3C6C1A117023002F09F8 /* MainMenu.xib in Resources */,
 				48DC12F11A12318A0095E932 /* dsa_pub.pem in Resources */,
 				48D0718619FBEDD6000ADE2F /* NSPreferencePanelWindowController.xib in Resources */,
+				481AB65C1A20EC8700CC2CDA /* About.xib in Resources */,
 				48C7CEE219F98EE8006B8EC0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				481AB65B1A20EC8700CC2CDA /* About.swift in Sources */,
 				48D0718519FBEDD6000ADE2F /* NSPreferencePanelWindowController.swift in Sources */,
 				48992C0D19FA387000C0E88B /* DevModeInterfaceManager.m in Sources */,
 				48C7CEE019F98EE8006B8EC0 /* AppDelegate.swift in Sources */,

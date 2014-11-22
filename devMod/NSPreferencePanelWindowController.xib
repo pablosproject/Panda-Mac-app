@@ -92,14 +92,6 @@
                                     <action selector="lightTimeChange:" target="-2" id="MSi-iW-dD4"/>
                                 </connections>
                             </datePicker>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JeV-gA-sY6">
-                                <rect key="frame" x="322" y="290" width="112" height="112"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="112" id="Itm-tb-ijE"/>
-                                    <constraint firstAttribute="width" constant="112" id="Wkx-9N-c1O"/>
-                                </constraints>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="pandaLogo" id="vPg-2d-krd"/>
-                            </imageView>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="vQV-h0-gbN">
                                 <rect key="frame" x="217" y="18" width="322" height="38"/>
                                 <constraints>
@@ -114,9 +106,17 @@
                                     <action selector="launchLoginPressed:" target="-2" id="X1h-JR-edt"/>
                                 </connections>
                             </button>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JeV-gA-sY6">
+                                <rect key="frame" x="322" y="278" width="124" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="124" id="Itm-tb-ijE"/>
+                                    <constraint firstAttribute="width" constant="124" id="Wkx-9N-c1O"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="pandaLogo" id="vPg-2d-krd"/>
+                            </imageView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="JeV-gA-sY6" secondAttribute="centerX" id="2r1-aa-tS2"/>
+                            <constraint firstAttribute="centerX" secondItem="JeV-gA-sY6" secondAttribute="centerX" constant="-5.5" id="2r1-aa-tS2"/>
                             <constraint firstItem="rz1-Ob-WEG" firstAttribute="centerX" secondItem="Ea7-V5-gyc" secondAttribute="centerX" id="7IN-Aw-eOT"/>
                             <constraint firstAttribute="centerX" secondItem="vQV-h0-gbN" secondAttribute="centerX" id="82g-31-aeW"/>
                             <constraint firstItem="JeV-gA-sY6" firstAttribute="top" secondItem="g0u-XE-tir" secondAttribute="top" id="AYa-vg-x3H"/>
@@ -145,6 +145,6 @@
         </window>
     </objects>
     <resources>
-        <image name="pandaLogo" width="341" height="341"/>
+        <image name="pandaLogo" width="322" height="322"/>
     </resources>
 </document>

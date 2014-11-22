@@ -13,10 +13,16 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <menu id="6nW-Zp-zqT">
             <items>
-                <menuItem title="Preferences" id="jRU-Ao-6Ff">
+                <menuItem title="About" id="jRU-Ao-6Ff">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="preferencesPressed:" target="Voe-Tx-rLC" id="ONF-XD-mUl"/>
+                        <action selector="aboutPressed:" target="Voe-Tx-rLC" id="yTf-TH-3jG"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Preferences" id="HaN-8H-iVx">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="preferencesPressed:" target="Voe-Tx-rLC" id="Fsh-GO-jqI"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Check for updates" id="FOH-Dk-llX">
