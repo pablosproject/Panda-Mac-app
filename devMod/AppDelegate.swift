@@ -26,10 +26,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     var dateCheckTimer:NSTimer?
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-
-        //Tira su le date dai default di sistema
-        darkTime =  NSUserDefaults.standardUserDefaults().valueForKey("DarkTime") as? NSDate
-        lightTime =  NSUserDefaults.standardUserDefaults().valueForKey("LightTime") as? NSDate
+        
         dateCheckTimer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "checkTime", userInfo: nil, repeats: true)
         
         //Update icon with current interface state
@@ -127,27 +124,85 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     func checkTime(){
         let now = NSDate()
         
-        if (darkTime != nil) && (hasEqualHourAndMinutes(darkTime!, date2: now)){
-            activateDarkInterface()
-        }
+        //Tira su le date dai default di sistema
+        darkTime =  NSUserDefaults.standardUserDefaults().valueForKey("DarkTime") as? NSDate
+        lightTime =  NSUserDefaults.standardUserDefaults().valueForKey("LightTime") as? NSDate
         
-        if (lightTime != nil) && (hasEqualHourAndMinutes(lightTime!, date2: now)){
-            activateLightInterface()
-        }
+        let interfaceStateForTime = interfaceStateForCurrentTime(translateDateToday(darkTime), lightDate: translateDateToday(lightTime), now: now)
+        let currentInterface = currentInterfaceState()
         
+        if interfaceStateForTime != currentInterface{
+            switch interfaceStateForTime{
+            case .light:
+                activateLightInterface()
+            case .dark:
+                activateDarkInterface()
+            }
+        }
     }
     
-    func hasEqualHourAndMinutes(date1:NSDate, date2:NSDate) -> (Bool){
-        let calendar = NSCalendar.currentCalendar()
-        let flag = (NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitMinute)
-        
-        let components1 = calendar.components(flag, fromDate: date1)
-        let components2 = calendar.components(flag, fromDate: date2)
-        
-        let equalminutes = components1.minute == components2.minute
-        let equalHour = components1.hour == components2.hour
-        
-        return equalminutes && equalHour
+    func translateDateToday(date:NSDate?) -> (NSDate?){
+        if let date = date{
+            let calendar = NSCalendar.currentCalendar()
+            let calendarflag = (NSCalendarUnit.CalendarUnitDay | NSCalendarUnit.CalendarUnitMonth | NSCalendarUnit.CalendarUnitYear)
+            let hourFlag = (NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitMinute | NSCalendarUnit.CalendarUnitSecond)
+            let now = NSDate()
+            let componentsCalendar = calendar.components(calendarflag, fromDate: now)
+            let componentsHour = calendar.components(hourFlag, fromDate: date)
+            
+            var finalComponents = NSDateComponents()
+            finalComponents = componentsCalendar
+            finalComponents.hour = componentsHour.hour
+            finalComponents.minute = componentsHour.minute
+            finalComponents.second = componentsHour.second
+            
+            return calendar.dateFromComponents(finalComponents)
+        }
+        else{
+            return nil
+        }
+    }
+    
+    func interfaceStateForCurrentTime(darkDate:NSDate?, lightDate:NSDate?, now:NSDate)->(currentInterface){
+        if lightDate == nil && darkDate == nil{
+            return currentInterfaceState()
+        }
+        else if darkTime == nil{
+            return lightDate!.compare(now) == NSComparisonResult.OrderedAscending ? currentInterface.light : currentInterface.dark
+        }
+        else if lightDate == nil{
+            let comparation = darkDate!.compare(now)
+            return darkDate!.compare(now) == NSComparisonResult.OrderedAscending ? currentInterface.dark : currentInterface.light
+        }
+        else{
+            let comparison = lightDate!.compare(darkDate!)
+            if comparison == NSComparisonResult.OrderedDescending{ //Dark<Light
+                let darkComparison = darkDate!.compare(now)
+                let lightComparison = lightDate!.compare(now)
+                
+                //Now > Light || Now < Dark     ->light
+                if darkComparison == NSComparisonResult.OrderedDescending || lightComparison == NSComparisonResult.OrderedAscending{
+                    return currentInterface.light
+                }
+                //Now < Light && Now > Dark     ->dark
+                if darkComparison == NSComparisonResult.OrderedAscending && lightComparison == NSComparisonResult.OrderedDescending{
+                    return currentInterface.dark
+                }
+            }
+            else{ //Dark>Light
+                let darkComparison = darkDate!.compare(now)
+                let lightComparison = lightDate!.compare(now)
+                //Now > Dark || Now < Light     ->dark
+                if darkComparison == NSComparisonResult.OrderedAscending || lightComparison == NSComparisonResult.OrderedDescending{
+                    return currentInterface.dark
+                }
+                //Now < Dark && Now > Light     ->light
+                if darkComparison == NSComparisonResult.OrderedDescending && lightComparison == NSComparisonResult.OrderedAscending{
+                    return currentInterface.light
+                }
+            }
+        }
+        return currentInterfaceState()
     }
 }
 
