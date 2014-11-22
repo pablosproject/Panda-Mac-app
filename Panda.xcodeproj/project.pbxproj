@@ -103,18 +103,18 @@
 		48C7CEDC19F98EE8006B8EC0 /* devMod */ = {
 			isa = PBXGroup;
 			children = (
-				48DC12EB1A122FAC0095E932 /* Sparkle */,
-				48C7CEDF19F98EE8006B8EC0 /* AppDelegate.swift */,
-				48C7CEE119F98EE8006B8EC0 /* Images.xcassets */,
-				48C7CEE319F98EE8006B8EC0 /* MainMenu.xib */,
-				48C7CEDD19F98EE8006B8EC0 /* Supporting Files */,
-				48992C0B19FA387000C0E88B /* DevModeInterfaceManager.h */,
-				48992C0C19FA387000C0E88B /* DevModeInterfaceManager.m */,
 				48992C0A19FA387000C0E88B /* devMod-Bridging-Header.h */,
-				48D0718319FBEDD6000ADE2F /* NSPreferencePanelWindowController.swift */,
-				48D0718419FBEDD6000ADE2F /* NSPreferencePanelWindowController.xib */,
+				48992C0B19FA387000C0E88B /* DevModeInterfaceManager.h */,
 				48D0718719FBEFE4000ADE2F /* DevModeLoginItemManager.h */,
+				48992C0C19FA387000C0E88B /* DevModeInterfaceManager.m */,
 				48D0718819FBEFE4000ADE2F /* DevModeLoginItemManager.m */,
+				48C7CEDF19F98EE8006B8EC0 /* AppDelegate.swift */,
+				48D0718319FBEDD6000ADE2F /* NSPreferencePanelWindowController.swift */,
+				48C7CEE119F98EE8006B8EC0 /* Images.xcassets */,
+				48D0718419FBEDD6000ADE2F /* NSPreferencePanelWindowController.xib */,
+				48C7CEE319F98EE8006B8EC0 /* MainMenu.xib */,
+				48DC12EB1A122FAC0095E932 /* Sparkle */,
+				48C7CEDD19F98EE8006B8EC0 /* Supporting Files */,
 			);
 			path = devMod;
 			sourceTree = "<group>";
