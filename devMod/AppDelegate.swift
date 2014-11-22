@@ -34,8 +34,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         
         //Update icon with current interface state
         updateIconForCurrentMode()
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector:"updateIconForCurrentMode", name: "AppleInterfaceThemeChangedNotification", object: nil)
+        NSDistributedNotificationCenter.defaultCenter().addObserver(self, selector:"updateIconForCurrentMode", name: "AppleInterfaceThemeChangedNotification", object: nil)
     }
     override func awakeFromNib() {
         var statusBar = NSStatusBar.systemStatusBar()
@@ -76,8 +75,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             activateLightInterface()
         }
     }
-    
-    func updateIconForCurrentMode() {
+  
+   func updateIconForCurrentMode() {
         let currentInterfaceLight:currentInterface = currentInterfaceState()
         
         switch currentInterfaceLight{
