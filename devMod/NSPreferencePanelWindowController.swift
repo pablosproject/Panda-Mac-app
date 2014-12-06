@@ -24,6 +24,9 @@ class NSPreferencePanelWindowController: NSWindowController {
         //Set login item state
         launchAtStartupButton.state = DevModeLoginItemManager.isCurrentApplicatonInLoginItems() ? NSOnState : NSOffState
         
+        darkModeDatePicker.bezeled = true;
+        lightModeDatePicker.bezeled = true;
+        
         //Set darkDate
         if let darkDate = NSUserDefaults.standardUserDefaults().objectForKey("DarkTime") as? NSDate {
             darkModeDatePicker.dateValue = darkDate

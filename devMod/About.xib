@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="About" customModule="Panda" customModuleProvider="target">
             <connections>
+                <outlet property="developerLabel" destination="WYX-sg-6Qw" id="m76-lr-HlQ"/>
+                <outlet property="developerLabelWidth" destination="Va8-0A-LQk" id="cjE-N2-y6i"/>
+                <outlet property="graphicLabel" destination="X7D-wm-Jbi" id="wpr-Pq-dr5"/>
+                <outlet property="graphicLabelWidth" destination="n7B-MV-R2j" id="4mh-eX-3ZI"/>
                 <outlet property="versionLabel" destination="5Oj-ZF-81G" id="Q0V-bB-P3n"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
@@ -45,12 +49,68 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WYX-sg-6Qw" customClass="HyperlinkTextField">
+                                <rect key="frame" x="272" y="131" width="212" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="NAl-9e-sEb"/>
+                                    <constraint firstAttribute="width" constant="208" id="Va8-0A-LQk"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" alignment="center" title="Code by" id="3GF-gc-mTJ">
+                                    <font key="font" size="26" name="HelveticaNeue-Thin"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KUE-OT-uIs" customClass="HyperlinkTextField">
+                                <rect key="frame" x="272" y="178" width="212" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="208" id="CTM-w2-cEP"/>
+                                    <constraint firstAttribute="height" constant="24" id="Nws-H7-j4k"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" alignment="center" title="Code by" id="2oA-pK-uMh">
+                                    <font key="font" size="19" name="HelveticaNeue-Thin"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="X7D-wm-Jbi" customClass="HyperlinkTextField">
+                                <rect key="frame" x="273" y="38" width="212" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="YfQ-sS-UmZ"/>
+                                    <constraint firstAttribute="width" constant="208" id="n7B-MV-R2j"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" alignment="center" title="Code by" id="w5c-tc-BEu">
+                                    <font key="font" size="26" name="HelveticaNeue-Thin"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ggU-Wt-7Ml" customClass="HyperlinkTextField">
+                                <rect key="frame" x="273" y="85" width="212" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="208" id="7NZ-ke-M5P"/>
+                                    <constraint firstAttribute="height" constant="24" id="YNp-dI-KTe"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" alignment="center" title="Graphics by" id="VLv-52-Za9">
+                                    <font key="font" size="19" name="HelveticaNeue-Thin"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="X7D-wm-Jbi" firstAttribute="top" secondItem="ggU-Wt-7Ml" secondAttribute="bottom" constant="15" id="62g-YY-Unm"/>
+                            <constraint firstItem="KUE-OT-uIs" firstAttribute="top" secondItem="5Oj-ZF-81G" secondAttribute="bottom" constant="36" id="7SP-Dg-UlM"/>
+                            <constraint firstAttribute="centerX" secondItem="WYX-sg-6Qw" secondAttribute="centerX" id="9mB-cA-bQV"/>
+                            <constraint firstItem="WYX-sg-6Qw" firstAttribute="top" secondItem="KUE-OT-uIs" secondAttribute="bottom" constant="15" id="IJi-Ej-zGw"/>
+                            <constraint firstAttribute="centerX" secondItem="KUE-OT-uIs" secondAttribute="centerX" id="JTt-Dg-wU2"/>
                             <constraint firstItem="5Oj-ZF-81G" firstAttribute="top" secondItem="Ldr-9w-RzE" secondAttribute="bottom" constant="8" id="MbZ-ZH-7xh"/>
                             <constraint firstAttribute="centerX" secondItem="5Oj-ZF-81G" secondAttribute="centerX" id="Rm8-cl-QJF"/>
                             <constraint firstItem="Ldr-9w-RzE" firstAttribute="top" secondItem="9i5-eT-LDr" secondAttribute="top" id="Tz7-oH-Jvu"/>
                             <constraint firstAttribute="centerX" secondItem="Ldr-9w-RzE" secondAttribute="centerX" id="VCz-SD-sWo"/>
+                            <constraint firstItem="ggU-Wt-7Ml" firstAttribute="top" secondItem="WYX-sg-6Qw" secondAttribute="bottom" constant="22" id="i70-qV-iny"/>
+                            <constraint firstAttribute="centerX" secondItem="X7D-wm-Jbi" secondAttribute="centerX" id="imt-A1-Co3"/>
+                            <constraint firstAttribute="centerX" secondItem="ggU-Wt-7Ml" secondAttribute="centerX" id="kjM-kp-dsO"/>
                         </constraints>
                     </visualEffectView>
                 </subviews>

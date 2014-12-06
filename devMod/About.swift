@@ -8,11 +8,15 @@
 
 import Cocoa
 
-class About: NSWindowController {
+class About: NSWindowController, NSTextFieldDelegate{
 
     @IBOutlet weak var versionLabel: NSTextField!
     @IBOutlet weak var developerLabel: NSTextField!
     
+    @IBOutlet weak var graphicLabel: HyperlinkTextField!
+    @IBOutlet weak var developerLabelWidth: NSLayoutConstraint!
+    
+    @IBOutlet weak var graphicLabelWidth: NSLayoutConstraint!
     override func windowDidLoad() {
         super.windowDidLoad()
         
@@ -24,16 +28,28 @@ class About: NSWindowController {
             versionLabel.stringValue = "Version \(version)"
         }
         
-        let html = "Code by <a style =\"text-decoration: none; color:white;\" href=\"http://www.webpage.com\">@pablospoject</a>"
+        let html = "<a style =\"text-decoration: none; color:white;\" href=\"http://www.webpage.com\">@PablosPoject</a>"
         let developerString = attributedStringFromHTML(html)
-        developerLabel.selectable = true
+        developerLabel.selectable = false
         developerLabel.allowsEditingTextAttributes = true
+        developerLabel.editable = false
         developerLabel.attributedStringValue = developerString
-        developerLabel.sizeToFit()
+        let size = developerLabel.sizeThatFits(NSSize(width: 10000, height: 1100));
+        developerLabelWidth.constant = size.width
+        
+        let html_graphic = "<a style =\"text-decoration: none; color:white;\" href=\"http://www.webpage.com\">@BeatriceVivaldi</a>"
+        let graphicString = attributedStringFromHTML(html_graphic)
+        graphicLabel.selectable = false
+        graphicLabel.allowsEditingTextAttributes = true
+        graphicLabel.editable = false
+        graphicLabel.attributedStringValue = graphicString
+        let size_graphic = graphicLabel.sizeThatFits(NSSize(width: 10000, height: 1100));
+        graphicLabelWidth.constant = size_graphic.width
+        
     }
  
     func attributedStringFromHTML (HTML:NSString) -> NSAttributedString{
-        let font = NSFont(name:"HelveticaNeue-Light", size: 20)
+        let font = NSFont(name:"HelveticaNeue-Light", size: 24)
         let htmlString = "<span style=\"color: white; font-family:'\(font!.fontName)'; font-size:\(font!.pointSize)px;\">\(HTML)</span>"
         let data = htmlString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
         let string = NSAttributedString(data: data!,options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
@@ -42,3 +58,4 @@ NSCharacterEncodingDocumentAttribute: NSUTF8StringEncoding],
         return string!;
     }
 }
+
