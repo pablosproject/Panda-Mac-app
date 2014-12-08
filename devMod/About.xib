@@ -49,7 +49,7 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WYX-sg-6Qw" customClass="HyperlinkTextField">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WYX-sg-6Qw">
                                 <rect key="frame" x="272" y="131" width="212" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="NAl-9e-sEb"/>
@@ -73,7 +73,7 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="X7D-wm-Jbi" customClass="HyperlinkTextField">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="X7D-wm-Jbi">
                                 <rect key="frame" x="273" y="38" width="212" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="YfQ-sS-UmZ"/>

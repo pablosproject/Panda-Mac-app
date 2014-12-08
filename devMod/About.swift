@@ -13,7 +13,7 @@ class About: NSWindowController, NSTextFieldDelegate{
     @IBOutlet weak var versionLabel: NSTextField!
     @IBOutlet weak var developerLabel: NSTextField!
     
-    @IBOutlet weak var graphicLabel: HyperlinkTextField!
+    @IBOutlet weak var graphicLabel: NSTextField!
     @IBOutlet weak var developerLabelWidth: NSLayoutConstraint!
     
     @IBOutlet weak var graphicLabelWidth: NSLayoutConstraint!
