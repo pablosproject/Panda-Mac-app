@@ -19,7 +19,7 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <rect key="contentRect" x="196" y="240" width="757" height="402"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
             <value key="minSize" type="size" width="757" height="402"/>
             <value key="maxSize" type="size" width="757" height="402"/>
             <view key="contentView" id="se5-gp-TjO">
@@ -126,6 +126,18 @@
             </connections>
             <point key="canvasLocation" x="459.5" y="486"/>
         </window>
+        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SZS-Pa-x9k">
+            <rect key="frame" x="0.0" y="0.0" width="212" height="32"/>
+            <constraints>
+                <constraint firstAttribute="width" constant="208" id="br1-yQ-wdd"/>
+                <constraint firstAttribute="height" constant="32" id="pIE-l6-5ft"/>
+            </constraints>
+            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" alignment="center" title="Code by" id="SI3-aB-hww">
+                <font key="font" size="19" name="HelveticaNeue-Thin"/>
+                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+            </textFieldCell>
+        </textField>
     </objects>
     <resources>
         <image name="pandaLogo" width="322" height="322"/>

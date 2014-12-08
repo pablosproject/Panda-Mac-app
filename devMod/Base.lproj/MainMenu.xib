@@ -19,7 +19,7 @@
                         <action selector="aboutPressed:" target="Voe-Tx-rLC" id="yTf-TH-3jG"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Hour switch" id="AJ1-bx-NcJ">
+                <menuItem title="Auto switch theme" id="AJ1-bx-NcJ">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="hourSwitchPressed:" target="Voe-Tx-rLC" id="a42-ap-9Ae"/>
