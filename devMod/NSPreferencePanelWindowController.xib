@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSPreferencePanelWindowController" customModule="Panda" customModuleProvider="target">
@@ -18,7 +18,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" unifiedTitleAndToolbar="YES"/>
             <windowCollectionBehavior key="collectionBehavior" stationary="YES"/>
             <rect key="contentRect" x="196" y="240" width="757" height="402"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
             <value key="minSize" type="size" width="480" height="270"/>
             <value key="maxSize" type="size" width="480" height="270"/>
             <view key="contentView" id="se5-gp-TjO">
@@ -29,7 +29,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="757" height="402"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rz1-Ob-WEG">
-                                <rect key="frame" x="78" y="249" width="142" height="25"/>
+                                <rect key="frame" x="124" y="249" width="142" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="138" id="NHv-Dw-quj"/>
                                     <constraint firstAttribute="height" constant="25" id="cPD-TH-6bJ"/>
@@ -41,7 +41,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="411-9f-b23">
-                                <rect key="frame" x="539" y="249" width="140" height="25"/>
+                                <rect key="frame" x="492" y="249" width="140" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="F1F-AJ-sDr"/>
                                     <constraint firstAttribute="width" constant="136" id="ZnI-IH-KEY"/>
@@ -53,11 +53,11 @@
                                 </textFieldCell>
                             </textField>
                             <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ea7-V5-gyc">
-                                <rect key="frame" x="60" y="174" width="177" height="55"/>
+                                <rect key="frame" x="106" y="174" width="177" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="UvW-YP-nfx"/>
                                 </constraints>
-                                <datePickerCell key="cell" borderStyle="bezel" alignment="left" drawsBackground="NO" datePickerStyle="textField" id="tia-x0-wTH">
+                                <datePickerCell key="cell" alignment="left" drawsBackground="NO" datePickerStyle="textField" id="tia-x0-wTH">
                                     <font key="font" size="41" name="HelveticaNeue-Thin"/>
                                     <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
                                         <!--1982-02-12 16:00:00 +0000-->
@@ -69,25 +69,6 @@
                                 </datePickerCell>
                                 <connections>
                                     <action selector="darkTimeChange:" target="-2" id="kil-Db-c3M"/>
-                                </connections>
-                            </datePicker>
-                            <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="v39-ug-iZa">
-                                <rect key="frame" x="520" y="174" width="177" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="ah3-YF-mHb"/>
-                                </constraints>
-                                <datePickerCell key="cell" borderStyle="bezel" alignment="left" drawsBackground="NO" datePickerStyle="textField" id="gKf-jx-HoM">
-                                    <font key="font" size="41" name="HelveticaNeue-Thin"/>
-                                    <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
-                                        <!--1982-02-12 16:00:00 +0000-->
-                                        <timeZone key="timeZone" name="US/Pacific"/>
-                                    </calendarDate>
-                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <datePickerElements key="datePickerElements" hour="YES" minute="YES"/>
-                                </datePickerCell>
-                                <connections>
-                                    <action selector="lightTimeChange:" target="-2" id="MSi-iW-dD4"/>
                                 </connections>
                             </datePicker>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="vQV-h0-gbN">
@@ -112,6 +93,25 @@
                                 </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="pandaLogo" id="vPg-2d-krd"/>
                             </imageView>
+                            <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="v39-ug-iZa">
+                                <rect key="frame" x="474" y="174" width="177" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="ah3-YF-mHb"/>
+                                </constraints>
+                                <datePickerCell key="cell" alignment="left" drawsBackground="NO" datePickerStyle="textField" id="gKf-jx-HoM">
+                                    <font key="font" size="41" name="HelveticaNeue-Thin"/>
+                                    <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
+                                        <!--1982-02-12 16:00:00 +0000-->
+                                        <timeZone key="timeZone" name="US/Pacific"/>
+                                    </calendarDate>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <datePickerElements key="datePickerElements" hour="YES" minute="YES"/>
+                                </datePickerCell>
+                                <connections>
+                                    <action selector="lightTimeChange:" target="-2" id="MSi-iW-dD4"/>
+                                </connections>
+                            </datePicker>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="JeV-gA-sY6" secondAttribute="centerX" constant="-5.5" id="2r1-aa-tS2"/>
@@ -120,11 +120,11 @@
                             <constraint firstItem="JeV-gA-sY6" firstAttribute="top" secondItem="g0u-XE-tir" secondAttribute="top" id="AYa-vg-x3H"/>
                             <constraint firstItem="Ea7-V5-gyc" firstAttribute="top" secondItem="rz1-Ob-WEG" secondAttribute="bottom" constant="20" id="CJv-Qr-SqJ"/>
                             <constraint firstAttribute="centerY" secondItem="v39-ug-iZa" secondAttribute="centerY" id="EjV-LO-x1o"/>
-                            <constraint firstItem="Ea7-V5-gyc" firstAttribute="leading" secondItem="g0u-XE-tir" secondAttribute="leading" constant="60" id="OIu-ya-TQi"/>
+                            <constraint firstAttribute="centerX" secondItem="Ea7-V5-gyc" secondAttribute="centerX" constant="184" id="Ob8-1v-xug"/>
                             <constraint firstItem="411-9f-b23" firstAttribute="centerY" secondItem="rz1-Ob-WEG" secondAttribute="centerY" id="WjA-NA-jyD"/>
+                            <constraint firstAttribute="centerX" secondItem="v39-ug-iZa" secondAttribute="centerX" constant="-184" id="Z8S-Jc-uVk"/>
                             <constraint firstAttribute="centerY" secondItem="Ea7-V5-gyc" secondAttribute="centerY" id="c9U-29-3TB"/>
                             <constraint firstAttribute="bottom" secondItem="vQV-h0-gbN" secondAttribute="bottom" constant="20" id="euu-GY-8uO"/>
-                            <constraint firstAttribute="trailing" secondItem="v39-ug-iZa" secondAttribute="trailing" constant="60" id="gkN-qt-GEd"/>
                             <constraint firstItem="411-9f-b23" firstAttribute="centerX" secondItem="v39-ug-iZa" secondAttribute="centerX" id="iBU-Gm-koM"/>
                         </constraints>
                     </visualEffectView>
