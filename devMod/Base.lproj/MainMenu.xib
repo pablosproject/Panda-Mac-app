@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -17,6 +17,12 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="aboutPressed:" target="Voe-Tx-rLC" id="yTf-TH-3jG"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Hour switch" id="AJ1-bx-NcJ">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="hourSwitchPressed:" target="Voe-Tx-rLC" id="a42-ap-9Ae"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Preferences" id="HaN-8H-iVx">
@@ -43,6 +49,7 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Panda" customModuleProvider="target">
             <connections>
                 <outlet property="appMenu" destination="6nW-Zp-zqT" id="9Br-QM-Zoa"/>
+                <outlet property="hourSwitchButton" destination="AJ1-bx-NcJ" id="1Ss-dO-IVu"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>

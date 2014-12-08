@@ -18,6 +18,8 @@ enum currentInterface{
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     @IBOutlet weak var appMenu: NSMenu!
+    @IBOutlet weak var hourSwitchButton: NSMenuItem!
+
     var statusItem:NSStatusItem?
     var statusButton:NSStatusBarButton?
     var preferenceWindow:NSPreferencePanelWindowController?
@@ -25,8 +27,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     var darkTime:NSDate?
     var lightTime:NSDate?
     var dateCheckTimer:NSTimer?
+
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+        
+        hourSwitchButton.state = NSOnState
         
         dateCheckTimer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "checkTime", userInfo: nil, repeats: true)
         
@@ -105,6 +110,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         }
         else{
             activateDevMode(sender)
+            hourSwitchButton.state = NSOffState;
         }
     }
     
@@ -127,6 +133,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         window.makeKeyAndOrderFront(self)
         NSApp.activateIgnoringOtherApps(true)
     }
+    
+    
+    @IBAction func hourSwitchPressed(sender: AnyObject) {
+        let newState = hourSwitchButton.state == NSOnState ? NSOffState : NSOnState
+        hourSwitchButton.state = newState
+    }
+    
     //MARK: - Check timer
     func checkTime(){
         let now = NSDate()
@@ -138,7 +151,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         let interfaceStateForTime = interfaceStateForCurrentTime(translateDateToday(darkTime), lightDate: translateDateToday(lightTime), now: now)
         let currentInterface = currentInterfaceState()
         
-        if interfaceStateForTime != currentInterface{
+        print((interfaceStateForTime != currentInterface) && (hourSwitchButton.state == NSOnState))
+        
+        if (interfaceStateForTime != currentInterface) && (hourSwitchButton.state == NSOnState){
             switch interfaceStateForTime{
             case .light:
                 activateLightInterface()
