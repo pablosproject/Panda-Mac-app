@@ -28,18 +28,18 @@ class About: NSWindowController, NSTextFieldDelegate{
             versionLabel.stringValue = "Version \(version)"
         }
         
-        let html = "<a style =\"text-decoration: none; color:white;\" href=\"http://www.webpage.com\">@PablosPoject</a>"
+        let html = "<a style =\"text-decoration: none; color:white;\" href=\"http://pablosproject.com/\">@PablosPoject</a>"
         let developerString = attributedStringFromHTML(html)
-        developerLabel.selectable = false
+        developerLabel.selectable = true
         developerLabel.allowsEditingTextAttributes = true
         developerLabel.editable = false
         developerLabel.attributedStringValue = developerString
         let size = developerLabel.sizeThatFits(NSSize(width: 10000, height: 1100));
         developerLabelWidth.constant = size.width
         
-        let html_graphic = "<a style =\"text-decoration: none; color:white;\" href=\"http://www.webpage.com\">@BeatriceVivaldi</a>"
+        let html_graphic = "<a style =\"text-decoration: none; color:white;\" href=\"http://www.beatricevivaldi.graphics/\">@BeatriceVivaldi</a>"
         let graphicString = attributedStringFromHTML(html_graphic)
-        graphicLabel.selectable = false
+        graphicLabel.selectable = true
         graphicLabel.allowsEditingTextAttributes = true
         graphicLabel.editable = false
         graphicLabel.attributedStringValue = graphicString
