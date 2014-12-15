@@ -31,6 +31,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         
+        Parse.setApplicationId("LnoMxKJR3RJKl7sSZHd4FEKIlqPyjfmZNkABpBQQ", clientKey: "qiwNWoemgLlsel4F2KTpq7B8pbTmpgWQLRqvHsFN")
+        PFAnalytics.trackAppOpenedWithLaunchOptions(nil)
+        
         hourSwitchButton.state = NSOnState
         
         dateCheckTimer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "checkTime", userInfo: nil, repeats: true)
@@ -150,8 +153,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         
         let interfaceStateForTime = interfaceStateForCurrentTime(translateDateToday(darkTime), lightDate: translateDateToday(lightTime), now: now)
         let currentInterface = currentInterfaceState()
-        
-        print((interfaceStateForTime != currentInterface) && (hourSwitchButton.state == NSOnState))
         
         if (interfaceStateForTime != currentInterface) && (hourSwitchButton.state == NSOnState){
             switch interfaceStateForTime{
