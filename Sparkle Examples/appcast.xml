@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Your Great App's Changelog</title>
+        <link>http://pablosproject.com/panda/appcast/appcast.xml</link>
+        <description>Most recent changes with links to updates.</description>
+        <language>en</language>
+        <item>
+            <title>Version 2.0 (2 bugs fixed; 3 new features)</title>
+            <sparkle:releaseNotesLink>
+                http://you.com/app/2.0.html
+            </sparkle:releaseNotesLink>
+            <pubDate>Wed, 09 Jan 2006 19:20:11 +0000</pubDate>
+            <enclosure url="http://pablosproject.com/panda/app/Panda1.1.zip" sparkle:version="1.1" type="application/octet-stream" sparkle:dsaSignature="MC0CFB90TQWFWlG1R0hpwOZYf0fYbpWHAhUAhhNvAiO3970DQzH6c/DM2ncZ35s=" />
+            <sparkle:minimumSystemVersion>10.7</sparkle:minimumSystemVersion>
+        </item>
+    </channel>
+</rss>
