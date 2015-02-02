@@ -24,8 +24,8 @@
         for (id sharedFile in sharedFileListArray) {
             LSSharedFileListItemRef sharedFileListItem = (__bridge LSSharedFileListItemRef)sharedFile;
             CFURLRef applicationPathURL = NULL;
-            
-            LSSharedFileListItemResolve(sharedFileListItem, 0, (CFURLRef *)&applicationPathURL, NULL);
+        
+            applicationPathURL = LSSharedFileListItemCopyResolvedURL(sharedFileListItem, 0, NULL);
             
             if (applicationPathURL != NULL) {
                 NSString *resolvedApplicationPath = [(__bridge NSURL *)applicationPathURL path];
@@ -79,8 +79,9 @@
         
         for (id sharedFile in sharedFileListArray) {
             LSSharedFileListItemRef sharedFileListItem = (__bridge LSSharedFileListItemRef)sharedFile;
-            CFURLRef applicationPathURL;
-            LSSharedFileListItemResolve(sharedFileListItem, 0, &applicationPathURL, NULL);
+            CFURLRef applicationPathURL = NULL;
+            applicationPathURL = LSSharedFileListItemCopyResolvedURL(sharedFileListItem, 0, NULL);
+
             if (applicationPathURL != NULL) {
                 NSString *resolvedApplicationPath = [(__bridge NSURL *)applicationPathURL path];
                 
