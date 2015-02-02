@@ -96,12 +96,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     func activateLightInterface(){
         println("Switch to Light")
-        DevModeInterfaceManager.switchToLightMode()
+        PAThemeUtility.switchToLightMode()
     }
     
     func activateDarkInterface(){
         println("Switch to Darks")
-        DevModeInterfaceManager.switchToDarkMode()
+        PAThemeUtility.switchToDarkMode()
     }
     
     func barButtonMenuPressed(sender: NSStatusBarButton!){

@@ -3,5 +3,5 @@
 //
 #import <ParseOSX/ParseOSX.h>
 #import <Bolts/Bolts.h>
-#import "DevModeInterfaceManager.h"
-#import "DevModeLoginItemManager.h"
+#import "PAThemeUtility.h"
+#import "PALoginItemUtility.h"

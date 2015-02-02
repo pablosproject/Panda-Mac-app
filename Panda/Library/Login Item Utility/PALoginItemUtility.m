@@ -1,14 +1,14 @@
 //
-//  DevModeLoginItemManager.m
+//  PALoginItemUtility.m
 //  devMod
 //
 //  Created by Paolo Tagliani on 10/25/14.
 //  Copyright (c) 2014 Paolo Tagliani. All rights reserved.
 //
 
-#import "DevModeLoginItemManager.h"
+#import "PALoginItemUtility.h"
 
-@implementation DevModeLoginItemManager
+@implementation PALoginItemUtility
 
 + (BOOL)isCurrentApplicatonInLoginItems{
     LSSharedFileListRef sharedFileList = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);

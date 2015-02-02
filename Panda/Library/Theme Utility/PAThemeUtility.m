@@ -1,14 +1,14 @@
 //
-//  DevModeInterfaceManager.m
+//  PAThemeUtility.m
 //  devMod
 //
 //  Created by Paolo Tagliani on 10/24/14.
 //  Copyright (c) 2014 Paolo Tagliani. All rights reserved.
 //
 
-#import "DevModeInterfaceManager.h"
+#import "PAThemeUtility.h"
 
-@implementation DevModeInterfaceManager
+@implementation PAThemeUtility
 
 + (void)switchToLightMode{
     NSString *newMode = @"Light";

@@ -1,5 +1,5 @@
 //
-//  DevModeLoginItemManager.h
+//  PALoginItemUtility.h
 //  devMod
 //
 //  Created by Paolo Tagliani on 10/25/14.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DevModeLoginItemManager : NSObject
+@interface PALoginItemUtility : NSObject
 
 + (BOOL)isCurrentApplicatonInLoginItems;
 + (void)addCurrentApplicatonToLoginItems;

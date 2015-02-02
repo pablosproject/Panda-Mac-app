@@ -23,7 +23,7 @@ class NSPreferencePanelWindowController: NSWindowController {
         self.window?.titleVisibility = NSWindowTitleVisibility.Hidden;
 
         //Set login item state
-        launchAtStartupButton.state = DevModeLoginItemManager.isCurrentApplicatonInLoginItems() ? NSOnState : NSOffState
+        launchAtStartupButton.state = PALoginItemUtility.isCurrentApplicatonInLoginItems() ? NSOnState : NSOffState
         
         //Set darkDate
         if let darkDate = NSUserDefaults.standardUserDefaults().objectForKey("DarkTime") as? NSDate {
@@ -38,10 +38,10 @@ class NSPreferencePanelWindowController: NSWindowController {
     
     @IBAction func launchLoginPressed(sender: NSButton) {
         if sender.state == NSOnState{
-            DevModeLoginItemManager.addCurrentApplicatonToLoginItems()
+            PALoginItemUtility.addCurrentApplicatonToLoginItems()
         }
         else{
-            DevModeLoginItemManager.removeCurrentApplicatonToLoginItems()
+            PALoginItemUtility.removeCurrentApplicatonToLoginItems()
         }
     }
     

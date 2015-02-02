@@ -1,5 +1,5 @@
 //
-//  DevModeInterfaceManager.h
+//  PAThemeUtility.h
 //  devMod
 //
 //  Created by Paolo Tagliani on 10/24/14.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DevModeInterfaceManager : NSObject
+@interface PAThemeUtility : NSObject
 
 + (void)switchToLightMode;
 + (void)switchToDarkMode;
