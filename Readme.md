@@ -4,6 +4,8 @@
   <img src="http://pandapp.pablosproject.com/img/pandaLogo_small.png" alt="Panda mac app icon"/>
 </p>
 
+__<http://pandapp.pablosproject.com/App/Panda-1.0.zip>__
+
 ## Overview
 
 **Panda** is a simple menu bar application that switch between black and white theme in OSX Yosemite.
