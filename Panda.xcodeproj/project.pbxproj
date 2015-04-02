@@ -11,20 +11,17 @@
 		481BDEAE1A7FD25A0099C0FB /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 481BDE9B1A7FC8A50099C0FB /* Sparkle.framework */; };
 		481BDEB41A7FD5D90099C0FB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 481BDEB21A7FD5D90099C0FB /* Bolts.framework */; };
 		481BDEB51A7FD5D90099C0FB /* ParseOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 481BDEB31A7FD5D90099C0FB /* ParseOSX.framework */; };
-		481BDEB61A7FD5E70099C0FB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 481BDEB21A7FD5D90099C0FB /* Bolts.framework */; };
 		481BDEB71A7FD5E70099C0FB /* Bolts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 481BDEB21A7FD5D90099C0FB /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		481BDEB91A7FD5F90099C0FB /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 481BDE9B1A7FC8A50099C0FB /* Sparkle.framework */; };
 		481BDEBA1A7FD5F90099C0FB /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 481BDE9B1A7FC8A50099C0FB /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		481BDEBB1A7FD6130099C0FB /* ParseOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 481BDEB31A7FD5D90099C0FB /* ParseOSX.framework */; };
 		481BDEBC1A7FD6130099C0FB /* ParseOSX.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 481BDEB31A7FD5D90099C0FB /* ParseOSX.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FE9EE0D1F06DD55E6E341910 /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE9EE651898FBE5F5B4A5045 /* About.xib */; };
-		FE9EE55F9D00E7BE5958AB54 /* NSPreferencePanelWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9EE3FD53F4C34CBEA6D579 /* NSPreferencePanelWindowController.swift */; };
+		48CBD1461ACD426600CF5DCE /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CBD1411ACD426600CF5DCE /* About.swift */; };
+		48CBD1471ACD426600CF5DCE /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48CBD1421ACD426600CF5DCE /* About.xib */; };
+		48CBD1481ACD426600CF5DCE /* NSPreferencePanelWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CBD1441ACD426600CF5DCE /* NSPreferencePanelWindowController.swift */; };
+		48CBD1491ACD426600CF5DCE /* NSPreferencePanelWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48CBD1451ACD426600CF5DCE /* NSPreferencePanelWindowController.xib */; };
+		48CBD1501ACD42B200CF5DCE /* PALoginItemUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CBD14C1ACD42B200CF5DCE /* PALoginItemUtility.m */; };
+		48CBD1511ACD42B200CF5DCE /* PAThemeUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CBD14F1ACD42B200CF5DCE /* PAThemeUtility.m */; };
 		FE9EE94160D7254530FC9E6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9EECB892DE36E0C7B77545 /* AppDelegate.swift */; };
-		FE9EE98C96671C5E516A901F /* NSPreferencePanelWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE9EE621EE23DE16014A5F43 /* NSPreferencePanelWindowController.xib */; };
-		FE9EEC1E037D430ECED19279 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9EE12A0760E4F4717606E8 /* About.swift */; };
-		FE9EEDF77CA5FFED277968D8 /* PAThemeUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9EEDAAA436B3C5AAEBF2BF /* PAThemeUtility.m */; };
 		FE9EEE42118665D56C6F3834 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE9EEAA943AF0BB28B13DD04 /* Images.xcassets */; };
-		FE9EEE576477FC5B1B72E1BE /* PALoginItemUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9EE02FAE5CA24CEB295E46 /* PALoginItemUtility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,17 +47,17 @@
 		481BDEB21A7FD5D90099C0FB /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Panda/Bolts.framework; sourceTree = SOURCE_ROOT; };
 		481BDEB31A7FD5D90099C0FB /* ParseOSX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseOSX.framework; path = Panda/ParseOSX.framework; sourceTree = SOURCE_ROOT; };
 		48C7CEDA19F98EE8006B8EC0 /* Panda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Panda.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE9EE02FAE5CA24CEB295E46 /* PALoginItemUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PALoginItemUtility.m; sourceTree = "<group>"; };
-		FE9EE12A0760E4F4717606E8 /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
-		FE9EE3FD53F4C34CBEA6D579 /* NSPreferencePanelWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPreferencePanelWindowController.swift; sourceTree = "<group>"; };
-		FE9EE43564A524E7EDF0FCE7 /* PAThemeUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAThemeUtility.h; sourceTree = "<group>"; };
-		FE9EE621EE23DE16014A5F43 /* NSPreferencePanelWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NSPreferencePanelWindowController.xib; sourceTree = "<group>"; };
-		FE9EE651898FBE5F5B4A5045 /* About.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = About.xib; sourceTree = "<group>"; };
+		48CBD1411ACD426600CF5DCE /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		48CBD1421ACD426600CF5DCE /* About.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = About.xib; sourceTree = "<group>"; };
+		48CBD1441ACD426600CF5DCE /* NSPreferencePanelWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPreferencePanelWindowController.swift; sourceTree = "<group>"; };
+		48CBD1451ACD426600CF5DCE /* NSPreferencePanelWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSPreferencePanelWindowController.xib; sourceTree = "<group>"; };
+		48CBD14B1ACD42B200CF5DCE /* PALoginItemUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PALoginItemUtility.h; sourceTree = "<group>"; };
+		48CBD14C1ACD42B200CF5DCE /* PALoginItemUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PALoginItemUtility.m; sourceTree = "<group>"; };
+		48CBD14E1ACD42B200CF5DCE /* PAThemeUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAThemeUtility.h; sourceTree = "<group>"; };
+		48CBD14F1ACD42B200CF5DCE /* PAThemeUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAThemeUtility.m; sourceTree = "<group>"; };
 		FE9EE7A0109A26BF37B54525 /* Panda-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Panda-Bridging-Header.h"; sourceTree = "<group>"; };
-		FE9EE7AEA1D175499B5D6575 /* PALoginItemUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PALoginItemUtility.h; sourceTree = "<group>"; };
 		FE9EEAA943AF0BB28B13DD04 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FE9EECB892DE36E0C7B77545 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE9EEDAAA436B3C5AAEBF2BF /* PAThemeUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAThemeUtility.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,10 +67,7 @@
 			files = (
 				481BDEAE1A7FD25A0099C0FB /* Sparkle.framework in Frameworks */,
 				481BDEB41A7FD5D90099C0FB /* Bolts.framework in Frameworks */,
-				481BDEB91A7FD5F90099C0FB /* Sparkle.framework in Frameworks */,
 				481BDEB51A7FD5D90099C0FB /* ParseOSX.framework in Frameworks */,
-				481BDEB61A7FD5E70099C0FB /* Bolts.framework in Frameworks */,
-				481BDEBB1A7FD6130099C0FB /* ParseOSX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,41 +100,53 @@
 				FE9EE74E8A44FE98A44D4E2B /* Resources */,
 			);
 			name = Panda;
-			path = devMod;
 			sourceTree = "<group>";
 		};
-		FE9EE03033C6578BCAEB30DA /* Preferences */ = {
+		48CBD1401ACD426600CF5DCE /* About */ = {
 			isa = PBXGroup;
 			children = (
-				FE9EE621EE23DE16014A5F43 /* NSPreferencePanelWindowController.xib */,
-				FE9EE3FD53F4C34CBEA6D579 /* NSPreferencePanelWindowController.swift */,
+				48CBD1411ACD426600CF5DCE /* About.swift */,
+				48CBD1421ACD426600CF5DCE /* About.xib */,
 			);
-			path = Preferences;
-			sourceTree = "<group>";
+			name = About;
+			path = Panda/Controller/About;
+			sourceTree = SOURCE_ROOT;
 		};
-		FE9EE0BA97C4ACCEC028CD2C /* Theme Utility */ = {
+		48CBD1431ACD426600CF5DCE /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
-				FE9EEDAAA436B3C5AAEBF2BF /* PAThemeUtility.m */,
-				FE9EE43564A524E7EDF0FCE7 /* PAThemeUtility.h */,
+				48CBD1441ACD426600CF5DCE /* NSPreferencePanelWindowController.swift */,
+				48CBD1451ACD426600CF5DCE /* NSPreferencePanelWindowController.xib */,
 			);
-			path = "Theme Utility";
-			sourceTree = "<group>";
+			name = Preferences;
+			path = Panda/Controller/Preferences;
+			sourceTree = SOURCE_ROOT;
 		};
-		FE9EE10D87BC46FA55AD0E3C /* Login Item Utility */ = {
+		48CBD14A1ACD42B200CF5DCE /* Login Item Utility */ = {
 			isa = PBXGroup;
 			children = (
-				FE9EE7AEA1D175499B5D6575 /* PALoginItemUtility.h */,
-				FE9EE02FAE5CA24CEB295E46 /* PALoginItemUtility.m */,
+				48CBD14B1ACD42B200CF5DCE /* PALoginItemUtility.h */,
+				48CBD14C1ACD42B200CF5DCE /* PALoginItemUtility.m */,
 			);
-			path = "Login Item Utility";
-			sourceTree = "<group>";
+			name = "Login Item Utility";
+			path = "Panda/Library/Login Item Utility";
+			sourceTree = SOURCE_ROOT;
+		};
+		48CBD14D1ACD42B200CF5DCE /* Theme Utility */ = {
+			isa = PBXGroup;
+			children = (
+				48CBD14E1ACD42B200CF5DCE /* PAThemeUtility.h */,
+				48CBD14F1ACD42B200CF5DCE /* PAThemeUtility.m */,
+			);
+			name = "Theme Utility";
+			path = "Panda/Library/Theme Utility";
+			sourceTree = SOURCE_ROOT;
 		};
 		FE9EE20B66A1684CF371B660 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FE9EE52DC465ECA23AE8304A /* About */,
-				FE9EE03033C6578BCAEB30DA /* Preferences */,
+				48CBD1401ACD426600CF5DCE /* About */,
+				48CBD1431ACD426600CF5DCE /* Preferences */,
 			);
 			name = Controller;
 			path = ../Panda/Controller;
@@ -155,7 +161,7 @@
 				FE9EE7A0109A26BF37B54525 /* Panda-Bridging-Header.h */,
 			);
 			name = Application;
-			path = ../Panda/Application;
+			path = Panda/Application;
 			sourceTree = "<group>";
 		};
 		FE9EE370AD8EF9E826471D73 /* Sparkle */ = {
@@ -167,22 +173,13 @@
 			path = devMod;
 			sourceTree = SOURCE_ROOT;
 		};
-		FE9EE52DC465ECA23AE8304A /* About */ = {
-			isa = PBXGroup;
-			children = (
-				FE9EE12A0760E4F4717606E8 /* About.swift */,
-				FE9EE651898FBE5F5B4A5045 /* About.xib */,
-			);
-			path = About;
-			sourceTree = "<group>";
-		};
 		FE9EE74E8A44FE98A44D4E2B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				FE9EEAA943AF0BB28B13DD04 /* Images.xcassets */,
 			);
 			name = Resources;
-			path = ../Panda/Resources;
+			path = Panda/Resources;
 			sourceTree = "<group>";
 		};
 		FE9EE8C26EB60D5A85DC256C /* External */ = {
@@ -217,8 +214,8 @@
 		FE9EEC756DBFB72E0BE53D02 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				FE9EE10D87BC46FA55AD0E3C /* Login Item Utility */,
-				FE9EE0BA97C4ACCEC028CD2C /* Theme Utility */,
+				48CBD14A1ACD42B200CF5DCE /* Login Item Utility */,
+				48CBD14D1ACD42B200CF5DCE /* Theme Utility */,
 			);
 			name = Library;
 			path = ../Panda/Library;
@@ -251,7 +248,7 @@
 		48C7CED219F98EE8006B8EC0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "Paolo Tagliani";
 				TargetAttributes = {
 					48C7CED919F98EE8006B8EC0 = {
@@ -282,9 +279,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48CBD1471ACD426600CF5DCE /* About.xib in Resources */,
 				481BDEA61A7FCA860099C0FB /* MainMenu.xib in Resources */,
-				FE9EE0D1F06DD55E6E341910 /* About.xib in Resources */,
-				FE9EE98C96671C5E516A901F /* NSPreferencePanelWindowController.xib in Resources */,
+				48CBD1491ACD426600CF5DCE /* NSPreferencePanelWindowController.xib in Resources */,
 				FE9EEE42118665D56C6F3834 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,11 +293,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE9EEE576477FC5B1B72E1BE /* PALoginItemUtility.m in Sources */,
-				FE9EEDF77CA5FFED277968D8 /* PAThemeUtility.m in Sources */,
-				FE9EEC1E037D430ECED19279 /* About.swift in Sources */,
+				48CBD1501ACD42B200CF5DCE /* PALoginItemUtility.m in Sources */,
+				48CBD1461ACD426600CF5DCE /* About.swift in Sources */,
+				48CBD1481ACD426600CF5DCE /* NSPreferencePanelWindowController.swift in Sources */,
+				48CBD1511ACD42B200CF5DCE /* PAThemeUtility.m in Sources */,
 				FE9EE94160D7254530FC9E6F /* AppDelegate.swift in Sources */,
-				FE9EE55F9D00E7BE5958AB54 /* NSPreferencePanelWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +404,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					/Users/paolotagliani/.Trash,
 					"$(PROJECT_DIR)/Panda",
 					"$(PROJECT_DIR)/Panda/Panda",
 				);
@@ -431,7 +427,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					/Users/paolotagliani/.Trash,
 					"$(PROJECT_DIR)/Panda",
 					"$(PROJECT_DIR)/Panda/Panda",
 				);
