@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import Appkit
+import AppKit
 
 enum currentInterface{
     case light
@@ -43,13 +43,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         NSDistributedNotificationCenter.defaultCenter().addObserver(self, selector:"updateIconForCurrentMode", name: "AppleInterfaceThemeChangedNotification", object: nil)
     }
     override func awakeFromNib() {
-        var statusBar = NSStatusBar.systemStatusBar()
+        let statusBar = NSStatusBar.systemStatusBar()
         statusItem = statusBar.statusItemWithLength(-1)
         
         statusButton = statusItem!.button!
         statusButton?.target = self;
         statusButton?.action = "barButtonMenuPressed:"
-        statusButton?.sendActionOn(Int((NSEventMask.LeftMouseUpMask | NSEventMask.RightMouseUpMask).rawValue))
+        statusButton?.sendActionOn(Int((NSEventMask.LeftMouseUpMask.union(NSEventMask.RightMouseUpMask)).rawValue))
         
         appMenu.delegate = self
     }
@@ -59,7 +59,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         let property:CFPropertyList? = CFPreferencesCopyValue(interfaceValue, kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost)
         
         if let light:CFPropertyList = property{
-            if light as NSString == "Light"{
+            if light as! NSString == "Light"{
                 return currentInterface.light
             }
             else{
@@ -95,18 +95,18 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     
 
     func activateLightInterface(){
-        println("Switch to Light")
+        print("Switch to Light")
         PAThemeUtility.switchToLightMode()
     }
     
     func activateDarkInterface(){
-        println("Switch to Darks")
+        print("Switch to Darks")
         PAThemeUtility.switchToDarkMode()
     }
     
     func barButtonMenuPressed(sender: NSStatusBarButton!){
-        var event:NSEvent! = NSApp.currentEvent!
-        println (event.description)
+        let event:NSEvent! = NSApp.currentEvent!
+        print (event.description)
         if (event.type == NSEventType.RightMouseUp) {
             statusItem?.menu = appMenu
             statusItem?.popUpStatusItemMenu(appMenu) //Force the menu to be shown, otherwise it'll not
@@ -125,14 +125,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
   //MARK: -Action management
     @IBAction func preferencesPressed(sender: AnyObject) {
         preferenceWindow = NSPreferencePanelWindowController(windowNibName: "NSPreferencePanelWindowController")
-        var window:NSWindow! = preferenceWindow?.window!
+        let window:NSWindow! = preferenceWindow?.window!
         window.makeKeyAndOrderFront(self)
         NSApp.activateIgnoringOtherApps(true)
     }
     
     @IBAction func aboutPressed(sender: AnyObject) {
         aboutWindow = About(windowNibName: "About")
-        var window:NSWindow! = aboutWindow?.window!
+        let window:NSWindow! = aboutWindow?.window!
         window.makeKeyAndOrderFront(self)
         NSApp.activateIgnoringOtherApps(true)
     }
@@ -167,8 +167,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     func translateDateToday(date:NSDate?) -> (NSDate?){
         if let date = date{
             let calendar = NSCalendar.currentCalendar()
-            let calendarflag = (NSCalendarUnit.CalendarUnitDay | NSCalendarUnit.CalendarUnitMonth | NSCalendarUnit.CalendarUnitYear)
-            let hourFlag = (NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitMinute | NSCalendarUnit.CalendarUnitSecond)
+            let calendarflag: NSCalendarUnit = ([NSCalendarUnit.Day, NSCalendarUnit.Month, NSCalendarUnit.Year])
+            let hourFlag: NSCalendarUnit = ([NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second])
             let now = NSDate()
             let componentsCalendar = calendar.components(calendarflag, fromDate: now)
             let componentsHour = calendar.components(hourFlag, fromDate: date)
