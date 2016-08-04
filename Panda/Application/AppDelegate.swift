@@ -93,7 +93,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         }
     }
     
-
     func activateLightInterface(){
         print("Switch to Light")
         PAThemeUtility.switchToLightMode()
@@ -102,6 +101,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     func activateDarkInterface(){
         print("Switch to Darks")
         PAThemeUtility.switchToDarkMode()
+    }
+    
+    func resetInterfaceSettings() {
+        PAThemeUtility.resetSettings()
     }
     
     func barButtonMenuPressed(sender: NSStatusBarButton!){
@@ -137,10 +140,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         NSApp.activateIgnoringOtherApps(true)
     }
     
-    
     @IBAction func hourSwitchPressed(sender: AnyObject) {
         let newState = hourSwitchButton.state == NSOnState ? NSOffState : NSOnState
         hourSwitchButton.state = newState
+    }
+    
+    @IBAction func resetDarkPressed(sender: AnyObject) {
+        self.resetInterfaceSettings()
     }
     
     //MARK: - Check timer
