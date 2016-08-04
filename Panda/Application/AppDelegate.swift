@@ -8,6 +8,8 @@
 
 import Cocoa
 import AppKit
+import Fabric
+import Crashlytics
 
 enum currentInterface{
     case light
@@ -30,10 +32,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        
-        Parse.setApplicationId("LnoMxKJR3RJKl7sSZHd4FEKIlqPyjfmZNkABpBQQ", clientKey: "qiwNWoemgLlsel4F2KTpq7B8pbTmpgWQLRqvHsFN")
-        PFAnalytics.trackAppOpenedWithLaunchOptions(nil)
-        
+        Fabric.with([Crashlytics.self])
+
         hourSwitchButton.state = NSOnState
         
         dateCheckTimer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: #selector(AppDelegate.checkTime), userInfo: nil, repeats: true)
