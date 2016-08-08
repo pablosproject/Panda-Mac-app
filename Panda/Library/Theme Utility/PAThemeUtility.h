@@ -12,5 +12,6 @@
 
 + (void)switchToLightMode;
 + (void)switchToDarkMode;
++ (void)resetSettings;
 
 @end
