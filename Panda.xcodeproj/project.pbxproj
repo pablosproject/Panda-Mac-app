@@ -8,36 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		481BDEA61A7FCA860099C0FB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 481BDEA31A7FC9320099C0FB /* MainMenu.xib */; };
-		481BDEAE1A7FD25A0099C0FB /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 481BDE9B1A7FC8A50099C0FB /* Sparkle.framework */; };
-		481BDEBA1A7FD5F90099C0FB /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 481BDE9B1A7FC8A50099C0FB /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		48CBD1461ACD426600CF5DCE /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CBD1411ACD426600CF5DCE /* About.swift */; };
 		48CBD1471ACD426600CF5DCE /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48CBD1421ACD426600CF5DCE /* About.xib */; };
 		48CBD1481ACD426600CF5DCE /* NSPreferencePanelWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CBD1441ACD426600CF5DCE /* NSPreferencePanelWindowController.swift */; };
 		48CBD1491ACD426600CF5DCE /* NSPreferencePanelWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48CBD1451ACD426600CF5DCE /* NSPreferencePanelWindowController.xib */; };
 		48CBD1501ACD42B200CF5DCE /* PALoginItemUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CBD14C1ACD42B200CF5DCE /* PALoginItemUtility.m */; };
 		48CBD1511ACD42B200CF5DCE /* PAThemeUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CBD14F1ACD42B200CF5DCE /* PAThemeUtility.m */; };
+		528EBFCC1D5CCB83006E1E73 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 528EBFCB1D5CCB83006E1E73 /* dsa_pub.pem */; };
 		52C6F7111D53AFD00011B144 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C6F70F1D53AFD00011B144 /* Fabric.framework */; };
 		52C6F7121D53AFD00011B144 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C6F7101D53AFD00011B144 /* Crashlytics.framework */; };
+		52ECA6961D5921DD0094EA6A /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52ECA6951D5921DD0094EA6A /* Sparkle.framework */; };
+		52ECA6981D59242B0094EA6A /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52ECA6951D5921DD0094EA6A /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FE9EE94160D7254530FC9E6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9EECB892DE36E0C7B77545 /* AppDelegate.swift */; };
 		FE9EEE42118665D56C6F3834 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE9EEAA943AF0BB28B13DD04 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		481BDEB81A7FD5E70099C0FB /* Embed Frameworks */ = {
+		52ECA6971D5924150094EA6A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				481BDEBA1A7FD5F90099C0FB /* Sparkle.framework in Embed Frameworks */,
+				52ECA6981D59242B0094EA6A /* Sparkle.framework in CopyFiles */,
 			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		481BDE9B1A7FC8A50099C0FB /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Panda/Sparkle.framework; sourceTree = SOURCE_ROOT; };
 		481BDE9D1A7FC9170099C0FB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Panda/Application/Info.plist; sourceTree = SOURCE_ROOT; };
 		481BDEA41A7FC9320099C0FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		48C7CEDA19F98EE8006B8EC0 /* Panda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Panda.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,8 +48,10 @@
 		48CBD14C1ACD42B200CF5DCE /* PALoginItemUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PALoginItemUtility.m; sourceTree = "<group>"; };
 		48CBD14E1ACD42B200CF5DCE /* PAThemeUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAThemeUtility.h; sourceTree = "<group>"; };
 		48CBD14F1ACD42B200CF5DCE /* PAThemeUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAThemeUtility.m; sourceTree = "<group>"; };
+		528EBFCB1D5CCB83006E1E73 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		52C6F70F1D53AFD00011B144 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
 		52C6F7101D53AFD00011B144 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
+		52ECA6951D5921DD0094EA6A /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = SOURCE_ROOT; };
 		FE9EE7A0109A26BF37B54525 /* Panda-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Panda-Bridging-Header.h"; sourceTree = "<group>"; };
 		FE9EEAA943AF0BB28B13DD04 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FE9EECB892DE36E0C7B77545 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,9 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				481BDEAE1A7FD25A0099C0FB /* Sparkle.framework in Frameworks */,
 				52C6F7121D53AFD00011B144 /* Crashlytics.framework in Frameworks */,
 				52C6F7111D53AFD00011B144 /* Fabric.framework in Frameworks */,
+				52ECA6961D5921DD0094EA6A /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,18 +161,10 @@
 			path = Panda/Application;
 			sourceTree = "<group>";
 		};
-		FE9EE370AD8EF9E826471D73 /* Sparkle */ = {
-			isa = PBXGroup;
-			children = (
-				481BDE9B1A7FC8A50099C0FB /* Sparkle.framework */,
-			);
-			name = Sparkle;
-			path = devMod;
-			sourceTree = SOURCE_ROOT;
-		};
 		FE9EE74E8A44FE98A44D4E2B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				528EBFCB1D5CCB83006E1E73 /* dsa_pub.pem */,
 				FE9EEAA943AF0BB28B13DD04 /* Images.xcassets */,
 			);
 			name = Resources;
@@ -181,9 +174,9 @@
 		FE9EE8C26EB60D5A85DC256C /* External */ = {
 			isa = PBXGroup;
 			children = (
+				52ECA6951D5921DD0094EA6A /* Sparkle.framework */,
 				52C6F70F1D53AFD00011B144 /* Fabric.framework */,
 				52C6F7101D53AFD00011B144 /* Crashlytics.framework */,
-				FE9EE370AD8EF9E826471D73 /* Sparkle */,
 			);
 			name = External;
 			path = ../Panda/External;
@@ -216,9 +209,9 @@
 			buildConfigurationList = 48C7CEF419F98EE8006B8EC0 /* Build configuration list for PBXNativeTarget "Panda" */;
 			buildPhases = (
 				48C7CED619F98EE8006B8EC0 /* Sources */,
+				52ECA6971D5924150094EA6A /* CopyFiles */,
 				48C7CED719F98EE8006B8EC0 /* Frameworks */,
 				48C7CED819F98EE8006B8EC0 /* Resources */,
-				481BDEB81A7FD5E70099C0FB /* Embed Frameworks */,
 				52C6F70E1D53AE3F0011B144 /* Crashlytics */,
 			);
 			buildRules = (
@@ -269,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				528EBFCC1D5CCB83006E1E73 /* dsa_pub.pem in Resources */,
 				48CBD1471ACD426600CF5DCE /* About.xib in Resources */,
 				481BDEA61A7FCA860099C0FB /* MainMenu.xib in Resources */,
 				48CBD1491ACD426600CF5DCE /* NSPreferencePanelWindowController.xib in Resources */,
@@ -416,7 +410,7 @@
 					"$(PROJECT_DIR)/Panda/Panda",
 				);
 				INFOPLIST_FILE = Panda/Application/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
@@ -440,7 +434,7 @@
 					"$(PROJECT_DIR)/Panda/Panda",
 				);
 				INFOPLIST_FILE = Panda/Application/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
