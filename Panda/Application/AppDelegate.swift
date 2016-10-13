@@ -8,6 +8,8 @@
 
 import Cocoa
 import AppKit
+import Fabric
+import Crashlytics
 
 enum currentInterface{
     case light
@@ -30,17 +32,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        
-        Parse.setApplicationId("LnoMxKJR3RJKl7sSZHd4FEKIlqPyjfmZNkABpBQQ", clientKey: "qiwNWoemgLlsel4F2KTpq7B8pbTmpgWQLRqvHsFN")
-        PFAnalytics.trackAppOpenedWithLaunchOptions(nil)
-        
+        Fabric.with([Crashlytics.self])
+
         hourSwitchButton.state = NSOnState
         
-        dateCheckTimer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "checkTime", userInfo: nil, repeats: true)
+        dateCheckTimer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: #selector(AppDelegate.checkTime), userInfo: nil, repeats: true)
         
         //Update icon with current interface state
         updateIconForCurrentMode()
-        NSDistributedNotificationCenter.defaultCenter().addObserver(self, selector:"updateIconForCurrentMode", name: "AppleInterfaceThemeChangedNotification", object: nil)
+        NSDistributedNotificationCenter.defaultCenter().addObserver(self, selector:#selector(AppDelegate.updateIconForCurrentMode), name: "AppleInterfaceThemeChangedNotification", object: nil)
     }
     override func awakeFromNib() {
         let statusBar = NSStatusBar.systemStatusBar()
@@ -48,7 +48,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         
         statusButton = statusItem!.button!
         statusButton?.target = self;
-        statusButton?.action = "barButtonMenuPressed:"
+        statusButton?.action = #selector(AppDelegate.barButtonMenuPressed(_:))
         statusButton?.sendActionOn(Int((NSEventMask.LeftMouseUpMask.union(NSEventMask.RightMouseUpMask)).rawValue))
         
         appMenu.delegate = self
@@ -93,7 +93,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         }
     }
     
-
     func activateLightInterface(){
         print("Switch to Light")
         PAThemeUtility.switchToLightMode()
@@ -102,6 +101,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     func activateDarkInterface(){
         print("Switch to Darks")
         PAThemeUtility.switchToDarkMode()
+    }
+    
+    func resetInterfaceSettings() {
+        PAThemeUtility.resetSettings()
     }
     
     func barButtonMenuPressed(sender: NSStatusBarButton!){
@@ -137,10 +140,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         NSApp.activateIgnoringOtherApps(true)
     }
     
-    
     @IBAction func hourSwitchPressed(sender: AnyObject) {
         let newState = hourSwitchButton.state == NSOnState ? NSOffState : NSOnState
         hourSwitchButton.state = newState
+    }
+    
+    @IBAction func resetDarkPressed(sender: AnyObject) {
+        self.resetInterfaceSettings()
     }
     
     //MARK: - Check timer
@@ -194,7 +200,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             return lightDate!.compare(now) == NSComparisonResult.OrderedAscending ? currentInterface.light : currentInterface.dark
         }
         else if lightDate == nil{
-            let comparation = darkDate!.compare(now)
+            _ = darkDate!.compare(now)
             return darkDate!.compare(now) == NSComparisonResult.OrderedAscending ? currentInterface.dark : currentInterface.light
         }
         else{

@@ -48,7 +48,7 @@ class NSPreferencePanelWindowController: NSWindowController {
     @IBAction func darkTimeChange(sender: NSDatePicker) {
         let appDelegate = NSApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.darkTime = sender.dateValue
-        var userDefaults = NSUserDefaults.standardUserDefaults()
+        let userDefaults = NSUserDefaults.standardUserDefaults()
         userDefaults.setValue(sender.dateValue, forKey: "DarkTime")
         userDefaults.synchronize()
     }
@@ -56,7 +56,7 @@ class NSPreferencePanelWindowController: NSWindowController {
     @IBAction func lightTimeChange(sender: NSDatePicker) {
         let appDelegate = NSApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.lightTime = sender.dateValue
-        var userDefaults = NSUserDefaults.standardUserDefaults()
+        let userDefaults = NSUserDefaults.standardUserDefaults()
         NSUserDefaults.standardUserDefaults().setValue(sender.dateValue, forKey: "LightTime")
         userDefaults.synchronize()
     }
