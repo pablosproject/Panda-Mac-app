@@ -4,7 +4,7 @@
   <img src="http://pandapp.pablosproject.com/img/pandaLogo_small.png" alt="Panda mac app icon"/>
 </p>
 
-__<http://pandapp.pablosproject.com/App/Panda-1.0.zip>__
+__<http://pandapp.pablosproject.com/App/Panda.zip>__
 
 ## Overview
 
